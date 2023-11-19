@@ -23,7 +23,7 @@
             <div class="header__navbar flex items-center order-1 lg:order-2 lg:mr-auto lg:ml-[62px]">
                 <i class="header__navbar-icon lg:hidden fa-solid fa-bars text-3xl"></i>
                 <div
-                    class="header__navbar-container flex flex-col absolute top-[65px] left-0 right-0 items-start lg:static lg:flex-row lg:items-center bg-white lg:bg-[#f2f2f2]">
+                    class="header__navbar-container my-hidden flex flex-col absolute top-[65px] left-0 right-0 items-start lg:static lg:flex-row lg:items-center bg-white lg:bg-[#f2f2f2]">
                     <div
                         class="lg:hidden header__search-container header__navbar-item w-full md:px-[25px] px-[18px] py-[10px] relative">
                         <form action="">
@@ -74,7 +74,30 @@
                 </div>
             </div>
         </div>
-        <div class="container mt-[65px]">
+        <div class="slider flex flex-row mt-[65px] flex-wrap">
+            <div class="w-full md:w-1/2 slider__img bg-[#eaeeef] text-center">
+                <img src="./images/slider_1.png" alt="" class="block max-w-[100%] object-contain slider__img">
+            </div>
+            <div class="w-full md:w-1/2 lg:px-[50px] px-[12px] bg-[f2f2f2] lg:py-[65px] md:py-[32px] py-[24px]">
+                <p class="text-2xl font-semibold slider__title">1111ADIZERO SL W</p>
+                <p class="text-sm font-semibold mt-2.5 slider__desc">1111The Adizero SL Running Shoes hand-pick the best from our world
+                    record-breaking Adizero franchise. The
+                    lightweight LIGHTSTRIKE EVA midsole delivers resilience to the midsole construction, so you can
+                    focus on the next stride, while the upper is made of a soft, engineered mesh that's zoned in key
+                    areas. A padded heel and tongue provides optimal comfort alongside the Adizero heel-blinker. The
+                    premium outsole is crafted to provide traction.</p>
+                <p class="text-base font-semibold underline mt-2.5">Buy Now ></p>
+            </div>
+            <div class="w-full items-center justify-center text-center py-2 slider__change">
+                <div class="inline-block mr-[70px]"><i class="fa-solid fa-chevron-left slider__prev"></i></div>
+                <div class="inline-block w-[15px] h-[15px] border border-black px-[5px] slider__btn active"></div>
+                <div class="inline-block w-[15px] h-[15px] border border-black px-[5px] slider__btn"></div>
+                <div class="inline-block w-[15px] h-[15px] border border-black px-[5px] slider__btn"></div>
+                <div class="inline-block w-[15px] h-[15px] border border-black px-[5px] slider__btn"></div>
+                <div class="inline-block ml-[70px]"><i class="fa-solid fa-chevron-right slider__next"></i></div>
+            </div>
+        </div>
+        <div class="container">
             <div class="flex flex-col md:flex-row">
                 <div
                     class="lg:px-[74px] lg:py-[100px] md:px-[40px] md:py-[52px] py-[24px] px-[20px] w-full md:w-1/2 bg-[#545454] text-white">
@@ -148,27 +171,28 @@
 
         </div>
         <div class="footer bg-[#f2f2f2]">
-            <div class="flex flex-row flex-wrap lg:flex-nowrap lg:py-[24px] lg:px-[140px]">
-                <div class="px-[40px]">
+            <div
+                class="flex flex-row flex-wrap lg:flex-nowrap lg:py-[24px] lg:px-[193px] md:px-[200px] items-start lg:gap-[82px]  px-[50px] py-[50px]">
+                <div class="w-1/2 md:w-1/3">
                     <p class="text-base font-semibold py-1">Company</p>
                     <p class="py-1"><a href="#" class="text-base">About Us</a></p>
                     <p class="py-1"><a href="#" class="text-base">Blog</a></p>
                     <p class="py-1"><a href="#" class="text-base">We're hiring</a></p>
                     <p class="py-1"><a href="#" class="text-base">Contact Us</a></p>
                 </div>
-                <div class="px-[40px]">
+                <div class="w-1/2 md:w-1/3">
                     <p class="text-base font-semibold py-1">Social</p>
                     <p class="py-1"><a href="#" class="text-base">Twitter</a></p>
                     <p class="py-1"><a href="#" class="text-base">Youtube</a></p>
                     <p class="py-1"><a href="#" class="text-base">Facebook</a></p>
                 </div>
-                <div class="px-[40px]">
-                    <p class="text-base font-semibold py-1">Company</p>
+                <div class="w-full md:w-1/3 mt-[45px] md:mt-0">
+                    <p class="text-base font-semibold py-1 ">Community</p>
                     <p class="py-1"><a href="#" class="text-base">Forums</a></p>
                     <p class="py-1"><a href="#" class="text-base">Support</a></p>
                     <p class="py-1"><a href="#" class="text-base">Documentation</a></p>
                 </div>
-                <div class="px-[40px]">
+                <div class="md:w-full mt-[45px] md:mt-[60px] lg:mt-0">
                     <p class="text-base font-semibold py-1">Sign Up For Email & Get 50 Points!</p>
                     <p class="py-1">Offer delivered within 4 days after signup.</p>
                     <div class="py-1">
@@ -176,7 +200,7 @@
                             <input type="text" id="small-input"
                                 class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-xs">
                             <button type="submit" id="add-btn"
-                                class="text-white bg-[#0F6CBD] hover:bg-blue-800 font-medium rounded-md text-sm w-full sm:w-auto px-5 py-2.5 text-center mt-2">Submit</button>
+                                class="text-white bg-[#0F6CBD] hover:bg-blue-800 font-medium rounded-md text-sm w-full sm:w-auto px-5 py-2.5 text-center mt-3">Submit</button>
                         </form>
                     </div>
                 </div>
