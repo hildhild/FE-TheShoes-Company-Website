@@ -8,12 +8,17 @@
     right: 0;
 }
 
-.header__navbar-container.my-hidden {
+.header__navbar-container.custom-hidden {
     right: 100%;
 }
 
+
 .active {
     background-color: black;
+}
+
+.my-hidden {
+    display: none !important;
 }
 
 .slider__change {
@@ -23,3 +28,4 @@
     -webkit-user-select: none;
     -ms-user-select: none;
 }
+
