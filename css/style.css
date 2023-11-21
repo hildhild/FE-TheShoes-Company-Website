@@ -20,7 +20,7 @@
 .my-hidden {
     display: none !important;
 }
-
+.product__slider-change,
 .slider__change {
     -webkit-user-drag: none;
     user-select: none;
