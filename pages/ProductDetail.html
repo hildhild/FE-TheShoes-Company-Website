@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/f776702b05.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="main">
+        <div class="lg:px-[100px] px-[20px] py-[50px] mt-[65px]">
+            <div class="flex flex-row flex-start items-center gap-[10px]">
+                <i class="fa-solid fa-chevron-left cursor-pointer block"></i>
+                <p>Back to product</p>
+            </div>
+            <div class="flex flex-col">
+                <div class="product__img bg-white w-full flex justify-center self-center">
+                    <img src="../images/puma.png" alt="" class="block w-1/2">
+                </div>
+                <div class="w-full items-center justify-center text-center py-2 product__slider-change mt-[22px]">
+                    <div class="inline-block mr-[70px]"><i
+                            class="fa-solid fa-chevron-left product__slider-prev cursor-pointer"></i>
+                    </div>
+                    <div
+                        class="inline-block w-[15px] h-[15px] border border-black px-[5px] mx-[10px] product__slider-btn cursor-pointer active">
+                    </div>
+                    <div
+                        class="inline-block w-[15px] h-[15px] border border-black px-[5px] mx-[10px] product__slider-btn cursor-pointer">
+                    </div>
+                    <div
+                        class="inline-block w-[15px] h-[15px] border border-black px-[5px] mx-[10px] product__slider-btn cursor-pointer">
+                    </div>
+                    <div
+                        class="inline-block w-[15px] h-[15px] border border-black px-[5px] mx-[10px] product__slider-btn cursor-pointer">
+                    </div>
+                    <div class="inline-block ml-[70px]"><i
+                            class="fa-solid fa-chevron-right product__slider-next cursor-pointer"></i></div>
+                </div>
+            </div>
+            <div class="flex flex-row justify-between self-center">
+                <p class="text-2xl font-semibold">Puma Men's Caven Sneaker</p>
+                <button type="button"
+                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-base px-5 py-2.5 mt-2.5 focus:outline-none">Add
+                    to cart
+                    <i class="fa-solid fa-arrow-right inline-block ml-[30px]"></i>
+                </button>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
