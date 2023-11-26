@@ -10,7 +10,6 @@
         rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/f776702b05.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>Document</title>
@@ -18,7 +17,13 @@
 
 <body>
     <div id="main">
-        <div class="header flex justify-between lg:px-[60px] px-[34px] bg-[#f2f2f2] fixed top-0 left-0 right-0">
+        <div class="sign flex flex-row h-[30px] fixed top-0 left-0 right-0 z-50 items-center md:px-[20px] px-[10px] justify-between bg-[#f2f2f2] text-sm">
+            <p class="hidden md:block">Free shipping on orders above $200 (US only)</p>
+            <p class="hidden md:ml-auto md:mr-[56px] mr-[10px]"><a href="./pages/Account.php">User1234</a></p>
+            <p class="cursor-pointer hidden"><a href="#">Log out</a></p>
+            <p class="cursor-pointer"><a href="./pages/Login.php">Log in</a></p>
+        </div>
+        <div class="header flex justify-between lg:px-[60px] px-[34px] bg-[#f2f2f2] fixed top-[30px] left-0 right-0 z-50">
             <div class="header__logo order-2 lg:order-1">
                 <img src="./images/logo.svg" alt="">
             </div>
@@ -48,9 +53,6 @@
                     <div class="header__navbar-item w-full"><a href="./pages/News.php"
                             class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl">News</a>
                     </div>
-                    <div class="header__navbar-item w-full"><a href="#"
-                            class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl">Support</a>
-                    </div>
                     <div class="header__navbar-item w-full"><a href="./pages/About.php"
                             class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl">About</a>
                     </div>
@@ -76,7 +78,7 @@
                 </div>
             </div>
         </div>
-        <div class="slider flex mt-[65px] flex-wrap">
+        <div class="slider flex mt-[95px] flex-wrap">
             <div class="slider__container flex flex-row flex-wrap">
                 <div class="w-full md:w-1/2 slider__img bg-[#eaeeef] text-center">
                     <img src="./images/slider_1.png" alt="" class="block max-w-[100%] object-contain slider__img">
