@@ -11,14 +11,13 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/f776702b05.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/style.css">
     <title>Document</title>
 </head>
 
 <body>
     <div id="main">
-        <div class="header flex justify-between lg:px-[60px] px-[34px] bg-[#f2f2f2] fixed top-0 left-0 right-0">
+        <div class="header flex justify-between lg:px-[60px] px-[34px] bg-[#f2f2f2] fixed top-0 left-0 right-0 z-50">
             <div class="header__logo order-2 lg:order-1">
                 <img src="../images/logo.svg" alt="">
             </div>
@@ -48,9 +47,6 @@
                     <div class="header__navbar-item w-full"><a href="./News.php"
                             class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl">News</a>
                     </div>
-                    <div class="header__navbar-item w-full"><a href="#"
-                            class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl">Support</a>
-                    </div>
                     <div class="header__navbar-item w-full"><a href="./About.php"
                             class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl">About</a>
                     </div>
@@ -76,7 +72,7 @@
                 </div>
             </div>
         </div>
-        <div class="lg:px-[100px] px-[20px] py-[50px] mt-[65px]">
+        <div class="lg:px-[100px] px-[20px] py-[50px] mt-[95px]">
             <div class="flex flex-row flex-start items-center gap-[10px]">
                 <i class="fa-solid fa-chevron-left cursor-pointer block"></i>
                 <p class="text-base underline underline-offset-4"><a href="./Product.php">Back to product</a></p>

@@ -11,7 +11,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/f776702b05.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/style.css">
     <title>Document</title>
 </head>
@@ -48,9 +47,6 @@
                     <div class="header__navbar-item w-full"><a href="./News.php"
                             class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl">News</a>
                     </div>
-                    <div class="header__navbar-item w-full"><a href="#"
-                            class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl">Support</a>
-                    </div>
                     <div class="header__navbar-item w-full"><a href="./About.php"
                             class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl">About</a>
                     </div>
@@ -76,7 +72,7 @@
                 </div>
             </div>
         </div>
-        <div class="lg:px-[220px] md:px-[80px] px-[20px] py-[50px] mt-[65px]">
+        <div class="lg:px-[220px] md:px-[80px] px-[20px] py-[50px] mt-[95px]">
             <div class="flex flex-row justify-between items-center">
                 <h2 class="text-4xl font-semibold">My account</h2>
                 <button type="button"
