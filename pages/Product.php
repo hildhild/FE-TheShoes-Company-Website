@@ -65,19 +65,19 @@
                     </form>
                 </div>
 
-                <div class="header__navbar-item w-full"><a href="../index.html"
+                <div class="header__navbar-item w-full"><a href="../index.php"
                         class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl">Home</a>
                 </div>
                 <div class="header__navbar-item w-full"><a href="#"
                         class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl">Products</a>
                 </div>
-                <div class="header__navbar-item w-full"><a href="./News.html"
+                <div class="header__navbar-item w-full"><a href="./News.php"
                         class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl">News</a>
                 </div>
                 <div class="header__navbar-item w-full"><a href="#"
                         class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl">Support</a>
                 </div>
-                <div class="header__navbar-item w-full"><a href="./About.html"
+                <div class="header__navbar-item w-full"><a href="./About.php"
                         class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl">About</a>
                 </div>
             </div>
@@ -170,7 +170,7 @@
                 <p>20 results</p>
                 <div class="flex flex-col lg:flex-row lg:gap-[122.5px] mb-[25px]">
                     <div class="w-full lg:w-1/3 lg:mb-0 mb-[25px]">
-                        <a href="./ProductDetail.html" class="block">
+                        <a href="./ProductDetail.php" class="block">
                             <div class="mb-2">
                                 <img src="../../images/puma.png" alt="">
                             </div>
@@ -180,7 +180,7 @@
 
                     </div>
                     <div class="w-full lg:w-1/3 lg:mb-0 mb-[25px]">
-                        <a href="./ProductDetail.html" class="block">
+                        <a href="./ProductDetail.php" class="block">
                             <div class="mb-2">
                                 <img src="../../images/puma.png" alt="">
                             </div>
@@ -189,7 +189,7 @@
                         </a>
                     </div>
                     <div class="w-full lg:w-1/3">
-                        <a href="./ProductDetail.html" class="block">
+                        <a href="./ProductDetail.php" class="block">
                             <div class="mb-2">
                                 <img src="../../images/puma.png" alt="">
                             </div>
@@ -200,7 +200,7 @@
                 </div>
                 <div class="flex flex-col lg:flex-row lg:gap-[122.5px] mb-[25px]">
                     <div class="w-full lg:w-1/3 lg:mb-0 mb-[25px]">
-                        <a href="./ProductDetail.html" class="block">
+                        <a href="./ProductDetail.php" class="block">
                             <div class="mb-2">
                                 <img src="../../images/puma.png" alt="">
                             </div>
@@ -209,7 +209,7 @@
                         </a>
                     </div>
                     <div class="w-full lg:w-1/3 lg:mb-0 mb-[25px]">
-                        <a href="./ProductDetail.html" class="block">
+                        <a href="./ProductDetail.php" class="block">
                             <div class="mb-2">
                                 <img src="../../images/puma.png" alt="">
                             </div>
@@ -218,7 +218,7 @@
                         </a>
                     </div>
                     <div class="w-full lg:w-1/3">
-                        <a href="./ProductDetail.html" class="block">
+                        <a href="./ProductDetail.php" class="block">
                             <div class="mb-2">
                                 <img src="../../images/puma.png" alt="">
                             </div>
@@ -229,7 +229,7 @@
                 </div>
                 <div class="flex flex-col lg:flex-row lg:gap-[122.5px] mb-[25px]">
                     <div class="w-full lg:w-1/3 lg:mb-0 mb-[25px]">
-                        <a href="./ProductDetail.html" class="block">
+                        <a href="./ProductDetail.php" class="block">
                             <div class="mb-2">
                                 <img src="../../images/puma.png" alt="">
                             </div>
@@ -238,7 +238,7 @@
                         </a>
                     </div>
                     <div class="w-full lg:w-1/3 lg:mb-0 mb-[25px]">
-                        <a href="./ProductDetail.html" class="block">
+                        <a href="./ProductDetail.php" class="block">
                             <div class="mb-2">
                                 <img src="../../images/puma.png" alt="">
                             </div>
@@ -247,7 +247,7 @@
                         </a>
                     </div>
                     <div class="w-full lg:w-1/3">
-                        <a href="./ProductDetail.html" class="block">
+                        <a href="./ProductDetail.php" class="block">
                             <div class="mb-2">
                                 <img src="../../images/puma.png" alt="">
                             </div>
@@ -258,7 +258,7 @@
                 </div>
                 <div class="flex flex-col lg:flex-row lg:gap-[122.5px] mb-[25px]">
                     <div class="w-full lg:w-1/3 lg:mb-0 mb-[25px]">
-                        <a href="./ProductDetail.html" class="block">
+                        <a href="./ProductDetail.php" class="block">
                             <div class="mb-2">
                                 <img src="../../images/puma.png" alt="">
                             </div>
@@ -267,7 +267,7 @@
                         </a>
                     </div>
                     <div class="w-full lg:w-1/3 lg:mb-0 mb-[25px]">
-                        <a href="./ProductDetail.html" class="block">
+                        <a href="./ProductDetail.php" class="block">
                             <div class="mb-2">
                                 <img src="../../images/puma.png" alt="">
                             </div>
@@ -276,7 +276,7 @@
                         </a>
                     </div>
                     <div class="w-full lg:w-1/3">
-                        <a href="./ProductDetail.html" class="block">
+                        <a href="./ProductDetail.php" class="block">
                             <div class="mb-2">
                                 <img src="../../images/puma.png" alt="">
                             </div>

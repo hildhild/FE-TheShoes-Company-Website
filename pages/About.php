@@ -30,7 +30,7 @@
                         class="lg:hidden header__search-container header__navbar-item w-full md:px-[25px] px-[18px] py-[10px] relative">
                         <form action="">
                             <input type="text" id="search-info"
-                                class="bg-gray-50 border border-gray-300 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-2.5 pl-2.5 pr-12"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-2.5 pl-2.5 pr-12"
                                 placeholder="Search..." required>
                             <div class="header__search text-2xl px-4 absolute bottom-1/2 translate-y-1/2 right-[2%]">
                                 <button type="submit" class="px-2 py-1"><i
@@ -39,19 +39,19 @@
                         </form>
                     </div>
 
-                    <div class="header__navbar-item w-full"><a href="../index.html"
+                    <div class="header__navbar-item w-full"><a href="../index.php"
                             class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl">Home</a>
                     </div>
-                    <div class="header__navbar-item w-full"><a href="./Product.html"
+                    <div class="header__navbar-item w-full"><a href="./Product.php"
                             class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl">Products</a>
                     </div>
-                    <div class="header__navbar-item w-full"><a href="./News.html"
+                    <div class="header__navbar-item w-full"><a href="./News.php"
                             class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl">News</a>
                     </div>
                     <div class="header__navbar-item w-full"><a href="#"
                             class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl">Support</a>
                     </div>
-                    <div class="header__navbar-item w-full"><a href="./About.html"
+                    <div class="header__navbar-item w-full"><a href="#"
                             class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl">About</a>
                     </div>
                 </div>
@@ -62,7 +62,7 @@
                 <div class="header__lg-search">
                     <form action="">
                         <input type="text" id="search-info"
-                            class="bg-gray-50 border border-gray-300 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-2.5 pl-2.5 pr-12"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-2.5 pl-2.5 pr-12"
                             placeholder="Search..." required>
                     </form>
                 </div>
@@ -76,84 +76,72 @@
                 </div>
             </div>
         </div>
-        <div class="lg:px-[220px] md:px-[80px] px-[20px] py-[50px] mt-[65px]">
-            <div class="flex flex-col">
-                <h2 class="lg:text-2xl font-semibold mb-[12px]">Sign in</h2>
-                <div class="w-full md:w-[300px]">
-                    <form action="">
-                        <div>
-                            <label for="email"
-                                class="block mb-[12px] text-base font-medium text-black">Email</label>
-                            <input type="email" id="email"
-                                class="block w-full p-2 text-black border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-blue-500 focus:border-blue-500">
-                        </div>
-                        <div>
-                            <label for="password"
-                                class="block my-[12px] text-base font-medium text-black">Password</label>
-                            <input type="password" id="password"
-                                class="block w-full p-2 text-black border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-blue-500 focus:border-blue-500">
-                        </div>
-                        <button type="submit"
-                            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-base px-5 py-2.5 mt-2.5 focus:outline-none">Sign
-                            in</button>
-                    </form>
-
+        <div class="about-content mt-[65px] py-[40px] lg:px-[75px] md:px-[62px] px-[42px]">
+            <h2 class="font-bold text-[36px]">About us</h2>
+            <div class="flex flex-col lg:flex-row">
+                <div class="w-full lg:w-2/3 text-justify mt-[28px]">
+                    <h3 class="font-semibold text-2xl leading-6">About The Shoe Company</h3>
+                    <p class="text-sm mt-2.5 leading-6">At The Shoe Company, we believe style shouldn't demand a huge
+                        investment of time or money. Style
+                        should be comfortable, accessible and easy to achieve. That's why our footwear feels as good as
+                        it
+                        looks, effortlessly taking you from the boardroom to the restaurant, to the park with your
+                        family.
+                        We strive to ensure your shopping experience is easy on your wallet, and your schedule, by
+                        delivering fashion and value to everyone in your household.</p>
+                    <p class="text-sm leading-6">The first The Shoe Company opened in 1992 and the chain has since grown
+                        to more than 115
+                        locations
+                        across Canada.</p>
+                    <p class="text-sm leading-6">The Shoe Company. Great brands. Smart Prices.</p>
+                </div>
+                <div class="w-full lg:w-1/3 flex justify-center items-center lg:mt-0 mt-[28px]">
+                    <img src="../images/logo_large.svg" alt="" class="block h-[135px] lg:h-[300px]">
                 </div>
             </div>
-            <div class="flex flex-col mt-[90px]">
-                <h2 class="lg:text-2xl font-semibold mb-[12px]">Don't have an account? Sign up instead</h2>
-                <div class="w-full md:w-[300px]">
-                    <form action="">
-                        <div>
-                            <label for="register-name"
-                                class="block mb-[12px] text-base font-medium text-black">Name</label>
-                            <input type="text" id="register-name"
-                                class="block w-full p-2 text-black border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-blue-500 focus:border-blue-500">
-                        </div>
-                        <div>
-                            <label for="register-email"
-                                class="block my-[12px] text-base font-medium text-black">Email</label>
-                            <input type="email" id="register-email"
-                                class="block w-full p-2 text-black border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-blue-500 focus:border-blue-500">
-                        </div>
-                        <div>
-                            <label for="register-password"
-                                class="block my-[12px] text-base font-medium text-black">Password</label>
-                            <input type="password" id="register-password"
-                                class="block w-full p-2 text-black border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-blue-500 focus:border-blue-500">
-                        </div>
-                        <p class="text-sm mt-2.5">At least 12 characters long, and must contain an alphabetical
-                            character.</p>
-                        <div>
-                            <label for="register-password-confirm"
-                                class="block my-[12px] text-base font-medium text-black">Password
-                                confirmation</label>
-                            <input type="password" id="register-password-confirm"
-                                class="block w-full p-2 text-black border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-blue-500 focus:border-blue-500">
-                        </div>
-                        <p class="text-sm mt-2.5">By creating an account you are agreeing to <span
-                                class="underline">Terms
-                                of Service </span>and <span class="underline">Privacy Policy</span></p>
-                        <button type="submit"
-                            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-base px-5 py-2.5 mt-2.5 focus:outline-none">Sign
-                            up</button>
-                    </form>
-
-                </div>
+            <div class="text-justify lg:pl-[187px] lg:mt-[120px] mt-[52px]">
+                <h3 class="font-semibold text-2xl leading-6">About The Shoe Company</h3>
+                <p class="text-sm mt-2.5 leading-6">Designer Brands is one of North America's largest designers,
+                    producers and retailers of footwear and accessories.</p>
+                <p class="text-sm leading-6">Our primary concept, DSW Designer Shoe Warehouse, offers brand name and
+                    designer dress, casual and athletic footwear and accessories. The first store opened in 1991 in
+                    Dublin, Ohio. Today, DSW operates more than 500 stores in 44 states.</p>
+                <p class="text-sm leading-6">The Affiliated Business Group operates nearly 290 leased departments for
+                    other retailers, such as Stein Mart, in the U.S.</p>
+                <p class="text-sm leading-6">Designer Brands also operates several retail concepts in Canada, including
+                    The Shoe Company and Shoe Warehouse, which provide a convenient footwear solution for the whole
+                    family, as well as DSW Designer Shoe Warehouse – nearly 150 locations in all.</p>
+                <p class="text-sm leading-6">In 2018, the company acquired Camuto Group, the legendary product design
+                    and brand development organization best known for the successful Vince Camuto® brand and the
+                    footwear licenses of Jessica Simpson® and Lucky Brand®. The partnership transformed Designer Brands
+                    into one of the largest footwear companies in North America with global, industry-leading
+                    capabilities in product design, development, sourcing and production.</p>
+                <p class="text-sm leading-6">A public company since 2005, our stock is traded on the New York City Stock
+                    Exchange as "DSW".</p>
             </div>
-            <div class="flex flex-col mt-[90px]">
-                <h2 class="lg:text-2xl font-semibold mb-[12px]">Forgot password?</h2>
-                <p class="text-sm mb-2.5">Type your email to get started.</p>
-                <div class="w-full md:w-[300px]">
-                    <form action="">
-                        <div>
-                            <input type="email" id="email-forgot"
-                                class="block w-full p-2 text-black border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-blue-500 focus:border-blue-500">
-                        </div>
-                        <button type="submit"
-                            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-base px-5 py-2.5 mt-2.5 focus:outline-none">Submit</button>
-                    </form>
-
+            <div class="flex flex-col-reverse md:flex-row mt-[70px]">
+                <div class="w-full md:w-2/3 lg:w-4/5 text-justify mt-[28px]">
+                    <h3 class="font-semibold text-2xl leading-6">Community Involvement</h3>
+                    <p class="text-sm mt-2.5 leading-6">Designer Brands supports charities that provide remarkable
+                        efforts to improve lives in our communities. We admire the integrity and efficiency with which
+                        these charities use their resources to establish services and directly support those in need.
+                        Designer Brands has been honoured and proud to support the following charities.</p>
+                    <ul class="text-sm mt-2.5 leading-6 list-disc pl-[32px]">
+                        <li>The United Way</li>
+                        <li>White Ribbon</li>
+                        <li>Eva's Initiatives</li>
+                        <li>Yellow Brick House</li>
+                        <li>Canadian Breast Cancer Foundation</li>
+                        <li>Dress for Success</li>
+                    </ul>
+                    <p class="text-sm leading-6">In addition, Designer Brands Associates have participated in Walk a
+                        Mile in Her Shoes events in cities across Canada to raise funds for the organizations we
+                        support. We look forward to continuing our journey of community involvement. We thank these
+                        organizations and others like them for the value they bring to our communities. Their courage
+                        and vision is commendable, reputable and praiseworthy!</p>
+                </div>
+                <div class="w-full md:w-1/3 lg:w-1/5 flex justify-center items-center lg:mt-0 mt-[28px]">
+                    <img src="../images/hand_logo.svg" alt="" class="block h-[106px]">
                 </div>
             </div>
         </div>
@@ -185,7 +173,7 @@
                     <div class="py-1">
                         <form action="">
                             <input type="text" id="small-input"
-                                class="block w-full p-2 text-black border border-gray-300 rounded-lg bg-gray-50 sm:text-xs">
+                                class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-xs">
                             <button type="submit" id="add-btn"
                                 class="text-white bg-[#0F6CBD] hover:bg-blue-800 font-medium rounded-md text-sm w-full sm:w-auto px-5 py-2.5 text-center mt-3">Submit</button>
                         </form>

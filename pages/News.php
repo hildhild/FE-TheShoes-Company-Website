@@ -38,10 +38,10 @@
                     </form>
                 </div>
 
-                <div class="header__navbar-item w-full"><a href="../index.html"
+                <div class="header__navbar-item w-full"><a href="../index.php"
                         class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl">Home</a>
                 </div>
-                <div class="header__navbar-item w-full"><a href="./Product.html"
+                <div class="header__navbar-item w-full"><a href="./Product.php"
                         class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl">Products</a>
                 </div>
                 <div class="header__navbar-item w-full"><a href="#"
@@ -50,7 +50,7 @@
                 <div class="header__navbar-item w-full"><a href="#"
                         class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl">Support</a>
                 </div>
-                <div class="header__navbar-item w-full"><a href="./About.html"
+                <div class="header__navbar-item w-full"><a href="./About.php"
                         class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl">About</a>
                 </div>
             </div>
