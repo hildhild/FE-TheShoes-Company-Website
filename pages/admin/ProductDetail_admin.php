@@ -10,9 +10,9 @@
         rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/f776702b05.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/header.css">
+    <link rel="stylesheet" href="../../css/style.css">
     <title>Document</title>
 </head>
 
@@ -20,7 +20,7 @@
     <div id="main">
         <div class="header flex justify-between lg:px-[60px] px-[34px] bg-[#f2f2f2] fixed top-0 left-0 right-0">
             <div class="header__logo order-2 lg:order-1">
-                <img src="../images/logo.svg" alt="">
+                <img src="../../images/logo.svg" alt="">
             </div>
             <div class="header__navbar flex items-center order-1 lg:order-2 lg:mr-auto lg:ml-[62px]">
                 <i class="header__navbar-icon lg:hidden fa-solid fa-bars text-3xl"></i>
@@ -39,19 +39,19 @@
                         </form>
                     </div>
 
-                    <div class="header__navbar-item w-full"><a href="../index.html"
+                    <div class="header__navbar-item w-full"><a href="../index.php"
                             class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl">Home</a>
                     </div>
                     <div class="header__navbar-item w-full"><a href="#"
                             class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl">Products</a>
                     </div>
-                    <div class="header__navbar-item w-full"><a href="./News.html"
+                    <div class="header__navbar-item w-full"><a href="./News.php"
                             class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl">News</a>
                     </div>
                     <div class="header__navbar-item w-full"><a href="#"
                             class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl">Support</a>
                     </div>
-                    <div class="header__navbar-item w-full"><a href="./About.html"
+                    <div class="header__navbar-item w-full"><a href="./About.php"
                             class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl">About</a>
                     </div>
                 </div>
@@ -77,22 +77,31 @@
             </div>
         </div>
         <div class="lg:px-[100px] px-[20px] py-[50px] mt-[65px]">
-            <div class="flex flex-row flex-start items-center gap-[10px]">
+            <div class="flex flex-row items-center justify-start gap-[10px]">
+                <button type="button"
+                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-base px-5 py-2.5 focus:outline-none">Edit
+                </button>
+                <button type="button"
+                    class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-base px-5 py-2.5">Delete
+                </button>
+
+            </div>
+            <div class="flex flex-row flex-start items-center gap-[10px] mt-[20px]">
                 <i class="fa-solid fa-chevron-left cursor-pointer block"></i>
-                <p class="text-base underline underline-offset-4"><a href="./Product.html">Back to product</a></p>
+                <p class="text-base underline underline-offset-4"><a href="./Product_admin.php">Back to product</a></p>
             </div>
             <div class="flex flex-col">
                 <div class="product__img bg-white w-full flex justify-center self-center">
-                    <img src="../images/puma.png" alt="" class="block w-1/2">
+                    <img src="../../images/puma.png" alt="" class="block w-1/2">
                 </div>
                 <div class="product__img bg-white w-full flex justify-center self-center my-hidden">
-                    <img src="../images/puma.png" alt="" class="block w-1/2">
+                    <img src="../../images/puma.png" alt="" class="block w-1/2">
                 </div>
                 <div class="product__img bg-white w-full flex justify-center self-center my-hidden">
-                    <img src="../images/puma.png" alt="" class="block w-1/2">
+                    <img src="../../images/puma.png" alt="" class="block w-1/2">
                 </div>
                 <div class="product__img bg-white w-full flex justify-center self-center my-hidden">
-                    <img src="../images/puma.png" alt="" class="block w-1/2">
+                    <img src="../../images/puma.png" alt="" class="block w-1/2">
                 </div>
                 <div class="w-full items-center justify-center text-center py-2 product__slider-change mt-[22px]">
                     <div class="inline-block mr-[70px]"><i
@@ -115,7 +124,7 @@
                 </div>
             </div>
             <div class="flex flex-col md:flex-row justify-between self-center mt-[20px]">
-                <div class="flex flex-col gap-[10px]">
+                <div class="flex flex-col gap-[10px]" contenteditable="true">
                     <p class="text-2xl font-semibold">Puma Men's Caven Sneaker</p>
                     <p class="text-2xl font-semibold">$79.99</p>
                     <p class="text-base"><span class="font-semibold">Colour </span>PUMA WHITE/PUMA BLACK</p>
@@ -206,22 +215,22 @@
                 <h2 class="text-2xl font-semibold mt-[20px]">You May Also Like</h2>
                 <div class="flex flex-col">
                     <div class="product__img bg-white w-full flex flex-col items-center">
-                        <img src="../images/puma.png" alt="" class="block w-1/2">
+                        <img src="../../images/puma.png" alt="" class="block w-1/2">
                         <p class="text-base font-semibold">Puma Men's Caven Sneaker 1</p>
                         <p class="text-base font-semibold">$79.99</p>
                     </div>
                     <div class="product__img bg-white w-full flex flex-col items-center">
-                        <img src="../images/puma.png" alt="" class="block w-1/2">
+                        <img src="../../images/puma.png" alt="" class="block w-1/2">
                         <p class="text-base font-semibold">Puma Men's Caven Sneaker 2</p>
                         <p class="text-base font-semibold">$89.99</p>
                     </div>
                     <div class="product__img bg-white w-full flex flex-col items-center">
-                        <img src="../images/puma.png" alt="" class="block w-1/2">
+                        <img src="../../images/puma.png" alt="" class="block w-1/2">
                         <p class="text-base font-semibold">Puma Men's Caven Sneaker 3</p>
                         <p class="text-base font-semibold">$99.99</p>
                     </div>
                     <div class="product__img bg-white w-full flex flex-col items-center">
-                        <img src="../images/puma.png" alt="" class="block w-1/2">
+                        <img src="../../images/puma.png" alt="" class="block w-1/2">
                         <p class="text-base font-semibold">Puma Men's Caven Sneaker 4</p>
                         <p class="text-base font-semibold">$109.99</p>
                     </div>
@@ -250,22 +259,22 @@
                 <h2 class="text-2xl font-semibold mt-[20px]">Customer Also Bought</h2>
                 <div class="flex flex-col">
                     <div class="product__img bg-white w-full flex flex-col items-center">
-                        <img src="../images/puma.png" alt="" class="block w-1/2">
+                        <img src="../../images/puma.png" alt="" class="block w-1/2">
                         <p class="text-base font-semibold">Puma Men's Caven Sneaker 1</p>
                         <p class="text-base font-semibold">$79.99</p>
                     </div>
                     <div class="product__img bg-white w-full flex flex-col items-center">
-                        <img src="../images/puma.png" alt="" class="block w-1/2">
+                        <img src="../../images/puma.png" alt="" class="block w-1/2">
                         <p class="text-base font-semibold">Puma Men's Caven Sneaker 2</p>
                         <p class="text-base font-semibold">$89.99</p>
                     </div>
                     <div class="product__img bg-white w-full flex flex-col items-center">
-                        <img src="../images/puma.png" alt="" class="block w-1/2">
+                        <img src="../../images/puma.png" alt="" class="block w-1/2">
                         <p class="text-base font-semibold">Puma Men's Caven Sneaker 3</p>
                         <p class="text-base font-semibold">$99.99</p>
                     </div>
                     <div class="product__img bg-white w-full flex flex-col items-center">
-                        <img src="../images/puma.png" alt="" class="block w-1/2">
+                        <img src="../../images/puma.png" alt="" class="block w-1/2">
                         <p class="text-base font-semibold">Puma Men's Caven Sneaker 4</p>
                         <p class="text-base font-semibold">$109.99</p>
                     </div>
@@ -328,8 +337,8 @@
             </div>
         </div>
     </div>
-    <script src="../script/header.js"></script>
-    <script src="../script/ProductDetail.js"></script>
+    <script src="../../script/header.js"></script>
+    <script src="../../script/ProductDetail.js"></script>
 </body>
 
 </html>
