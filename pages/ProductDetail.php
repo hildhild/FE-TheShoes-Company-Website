@@ -290,7 +290,7 @@
             <div id="reviews" class="pb-[20px]">
                 <h2 class="text-2xl font-semibold mt-[20px] flex">Reviews (21)</h2>
                 <form action="" class="my-[20px]">
-                    <textarea name="review-content" id="review-content" rows="5" class="w-full border-gray border-2 rounded-lg"></textarea>
+                    <textarea name="review-content" id="review-content" rows="3" class="w-full border-gray border-2 rounded-lg p-[20px]"></textarea>
                     <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-1/8">
                         Write a Review
                     </button>
