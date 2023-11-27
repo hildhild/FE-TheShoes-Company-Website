@@ -290,15 +290,15 @@
             <div id="reviews" class="pb-[20px]">
                 <h2 class="text-2xl font-semibold mt-[20px] flex">Reviews (21)</h2>
                 <form action="" class="my-[20px]">
+                    <textarea name="review-content" id="review-content" rows="5" class="w-full border-gray border-2 rounded-lg"></textarea>
                     <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-1/8">
                         Write a Review
                     </button>
                 </form>
                 <div class="review-item py-[20px]">
-                    <p class="text-base font-semibold mt-[5px]">A bit more comfort than expected!</p>
                     <div class="review-info flex">
                         <p class="review-own text-base font-semibold mt-[5px] mr-[10px]">Me </p>
-                        <p class="review-date text-base mt-[5px]"> - 25 Oct 2023</p>
+                        <p class="review-date text-base font-semibold mt-[5px]"> - 25 Oct 2023</p>
                     </div>
                     <p class="text-sm text-justify mt-[5px]">
                         These aren't your typical AF1s! I was surprised at first when I tried it on,
@@ -316,10 +316,9 @@
                     </form>
                 </div>
                 <div class="review-item py-[20px]">
-                    <p class="text-base font-semibold mt-[5px]">A bit more comfort than expected!</p>
                     <div class="review-info flex">
-                        <p class="review-own text-base mt-[5px] mr-[10px]">Victoria</p>
-                        <p class="review-date text-base mt-[5px]"> - 25 Oct 2023</p>
+                        <p class="review-own text-base font-semibold mt-[5px] mr-[10px]">Victoria</p>
+                        <p class="review-date text-base font-semibold mt-[5px]"> - 25 Oct 2023</p>
                     </div>
                     <p class="text-sm text-justify mt-[5px]">
                         These aren't your typical AF1s! I was surprised at first when I tried it on,
@@ -332,10 +331,9 @@
                     </p>
                 </div>
                 <div class="review-item py-[20px]">
-                    <p class="text-base font-semibold mt-[5px]">A bit more comfort than expected!</p>
                     <div class="review-info flex">
-                        <p class="review-own text-base mt-[5px] mr-[10px]">Mr Bean</p>
-                        <p class="review-date text-base mt-[5px]"> - 25 Oct 2023</p>
+                        <p class="review-own text-base font-semibold mt-[5px] mr-[10px]">Mr Bean</p>
+                        <p class="review-date text-base font-semibold mt-[5px]"> - 25 Oct 2023</p>
                     </div>
                     <p class="text-sm text-justify mt-[5px]">
                         These aren't your typical AF1s! I was surprised at first when I tried it on,
