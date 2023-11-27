@@ -18,7 +18,7 @@
 <body>
     <div id="main">
         <div class="sign flex flex-row h-[30px] fixed top-0 left-0 right-0 z-50 items-center md:px-[20px] px-[10px] justify-between bg-[#f2f2f2] text-sm">
-            <p class="hidden md:block">Free shipping on orders above $200 (US only)</p>
+            <p class="block">Free shipping on orders above $200 (US only)</p>
             <p class="hidden md:ml-auto md:mr-[56px] mr-[10px]"><a href="./pages/Account.php">User1234</a></p>
             <p class="cursor-pointer hidden"><a href="#">Log out</a></p>
             <p class="cursor-pointer"><a href="./pages/Login.php">Log in</a></p>
@@ -49,6 +49,9 @@
                     </div>
                     <div class="header__navbar-item w-full"><a href="./pages/Product.php"
                             class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl">Products</a>
+                    </div>
+                    <div class="header__navbar-item w-full"><a href="./pages/OrderHistory.php"
+                            class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl">History</a>
                     </div>
                     <div class="header__navbar-item w-full"><a href="./pages/News.php"
                             class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl">News</a>

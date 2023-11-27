@@ -42,6 +42,8 @@
                     </div>
                     <div class="header__navbar-item w-full"><a href="./Product.php" class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl">Products</a>
                     </div>
+                    <div class="header__navbar-item w-full"><a href="../pages/OrderHistory.php" class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl">History</a>
+                    </div>
                     <div class="header__navbar-item w-full"><a href="./News.php" class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl">News</a>
                     </div>
                     <div class="header__navbar-item w-full"><a href="./About.php" class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl">About</a>

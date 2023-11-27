@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;700;900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;700;900&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/f776702b05.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/main.css">
@@ -23,43 +22,33 @@
             </div>
             <div class="header__navbar flex items-center order-1 lg:order-2 lg:mr-auto lg:ml-[62px]">
                 <i class="header__navbar-icon lg:hidden fa-solid fa-bars text-3xl"></i>
-                <div
-                    class="header__navbar-container custom-hidden flex flex-col absolute top-[65px] left-0 right-0 items-start lg:static lg:flex-row lg:items-center bg-white lg:bg-[#f2f2f2]">
-                    <div
-                        class="lg:hidden header__search-container header__navbar-item w-full md:px-[25px] px-[18px] py-[10px] relative">
+                <div class="header__navbar-container custom-hidden flex flex-col absolute top-[65px] left-0 right-0 items-start lg:static lg:flex-row lg:items-center bg-white lg:bg-[#f2f2f2]">
+                    <div class="lg:hidden header__search-container header__navbar-item w-full md:px-[25px] px-[18px] py-[10px] relative">
                         <form action="">
-                            <input type="text" id="search-info"
-                                class="bg-gray-50 border border-gray-300 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-2.5 pl-2.5 pr-12"
-                                placeholder="Search..." required>
+                            <input type="text" id="search-info" class="bg-gray-50 border border-gray-300 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-2.5 pl-2.5 pr-12" placeholder="Search..." required>
                             <div class="header__search text-2xl px-4 absolute bottom-1/2 translate-y-1/2 right-[2%]">
-                                <button type="submit" class="px-2 py-1"><i
-                                        class="fa-solid fa-magnifying-glass"></i></button>
+                                <button type="submit" class="px-2 py-1"><i class="fa-solid fa-magnifying-glass"></i></button>
                             </div>
                         </form>
                     </div>
 
-                    <div class="header__navbar-item w-full"><a href="../index.php"
-                            class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl">Home</a>
+                    <div class="header__navbar-item w-full"><a href="../index.php" class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl">Home</a>
                     </div>
-                    <div class="header__navbar-item w-full"><a href="./Product.php"
-                            class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl">Products</a>
+                    <div class="header__navbar-item w-full"><a href="./Product.php" class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl">Products</a>
                     </div>
-                    <div class="header__navbar-item w-full"><a href="./News.php"
-                            class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl">News</a>
+                    <div class="header__navbar-item w-full"><a href="../pages/OrderHistory.php" class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl">History</a>
                     </div>
-                    <div class="header__navbar-item w-full"><a href="./About.php"
-                            class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl">About</a>
+                    <div class="header__navbar-item w-full"><a href="./News.php" class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl">News</a>
+                    </div>
+                    <div class="header__navbar-item w-full"><a href="./About.php" class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl">About</a>
                     </div>
                 </div>
             </div>
-            <div
-                class="header__lg-search hidden lg:block text-2xl px-4 py-[10px] cursor-pointer order-3 relative min-w-[25%]">
+            <div class="header__lg-search hidden lg:block text-2xl px-4 py-[10px] cursor-pointer order-3 relative min-w-[25%]">
                 <i class="fa-solid fa-magnifying-glass absolute bottom-1/2 translate-y-1/2 right-[10%]"></i>
                 <div class="header__lg-search">
                     <form action="">
-                        <input type="text" id="search-info"
-                            class="bg-gray-50 border border-gray-300 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-2.5 pl-2.5 pr-12"
-                            placeholder="Search..." required>
+                        <input type="text" id="search-info" class="bg-gray-50 border border-gray-300 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-2.5 pl-2.5 pr-12" placeholder="Search..." required>
                     </form>
                 </div>
             </div>
@@ -75,8 +64,7 @@
         <div class="lg:px-[220px] md:px-[80px] px-[20px] py-[50px] mt-[95px]">
             <div class="flex flex-row justify-between items-center">
                 <h2 class="text-4xl font-semibold">My account</h2>
-                <button type="button"
-                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-base px-5 py-2.5 mt-2.5 focus:outline-none">Edit
+                <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-base px-5 py-2.5 mt-2.5 focus:outline-none">Edit
                 </button>
             </div>
             <form action="">
@@ -86,46 +74,33 @@
                     </div>
                     <div class="w-full md:w-2/3">
                         <div>
-                            <label for="account-email"
-                                class="block mb-[4px] text-base font-medium text-[#242424]">Email</label>
-                            <input type="email" id="account-email"
-                                class="block w-full p-2 text-[#242424] border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-blue-500 focus:border-blue-500">
+                            <label for="account-email" class="block mb-[4px] text-base font-medium text-[#242424]">Email</label>
+                            <input type="email" id="account-email" class="block w-full p-2 text-[#242424] border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-blue-500 focus:border-blue-500">
                         </div>
                         <div class="mt-[20px]">
-                            <label for="account-name"
-                                class="block mb-[4px] text-base font-medium text-[#242424]">Name</label>
-                            <input type="text" id="account-name"
-                                class="block w-full p-2 text-[#242424] border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-blue-500 focus:border-blue-500">
+                            <label for="account-name" class="block mb-[4px] text-base font-medium text-[#242424]">Name</label>
+                            <input type="text" id="account-name" class="block w-full p-2 text-[#242424] border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-blue-500 focus:border-blue-500">
                         </div>
                         <div class="mt-[20px]">
-                            <label for="account-country"
-                                class="block mb-[4px] text-base font-medium text-[#242424]">Country</label>
-                            <input type="text" id="account-country"
-                                class="block w-full p-2 text-[#242424] border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-blue-500 focus:border-blue-500">
+                            <label for="account-country" class="block mb-[4px] text-base font-medium text-[#242424]">Country</label>
+                            <input type="text" id="account-country" class="block w-full p-2 text-[#242424] border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-blue-500 focus:border-blue-500">
                         </div>
                         <div class="mt-[20px]">
-                            <label for="account-state"
-                                class="block mb-[4px] text-base font-medium text-[#242424]">State/Province</label>
-                            <input type="text" id="account-state"
-                                class="block w-full p-2 text-[#242424] border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-blue-500 focus:border-blue-500">
+                            <label for="account-state" class="block mb-[4px] text-base font-medium text-[#242424]">State/Province</label>
+                            <input type="text" id="account-state" class="block w-full p-2 text-[#242424] border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-blue-500 focus:border-blue-500">
                         </div>
                         <div class="mt-[20px]">
-                            <label for="account-city"
-                                class="block mb-[4px] text-base font-medium text-[#242424]">City</label>
-                            <input type="text" id="account-city"
-                                class="block w-full p-2 text-[#242424] border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-blue-500 focus:border-blue-500">
+                            <label for="account-city" class="block mb-[4px] text-base font-medium text-[#242424]">City</label>
+                            <input type="text" id="account-city" class="block w-full p-2 text-[#242424] border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-blue-500 focus:border-blue-500">
                         </div>
                         <div class="mt-[20px]">
-                            <label for="account-address"
-                                class="block mb-[4px] text-base font-medium text-[#242424]">Address</label>
-                            <input type="text" id="account-address"
-                                class="block w-full p-2 text-[#242424] border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-blue-500 focus:border-blue-500">
+                            <label for="account-address" class="block mb-[4px] text-base font-medium text-[#242424]">Address</label>
+                            <input type="text" id="account-address" class="block w-full p-2 text-[#242424] border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-blue-500 focus:border-blue-500">
                         </div>
                         <div class="my-[20px]">
                             <label for="account-phone" class="block mb-[4px] text-base font-medium text-[#242424]">Phone
                                 number</label>
-                            <input type="text" id="account-phone"
-                                class="block w-full p-2 text-[#242424] border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-blue-500 focus:border-blue-500">
+                            <input type="text" id="account-phone" class="block w-full p-2 text-[#242424] border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-blue-500 focus:border-blue-500">
                         </div>
                     </div>
                 </div>
@@ -137,45 +112,35 @@
                         <div>
                             <p class="text-base font-medium text-[#242424]">Credit card / Debit card</p>
                             <div class="flex flex-row h-[20px] max-w-[50%] items-center gap-4 mt-[20px]">
-                                <img src="../images/visa.png" alt=""
-                                    class="block h-full cursor-pointer hover:opacity-60">
-                                <img src="../images/paypal.png" alt=""
-                                    class="block h-full cursor-pointer hover:opacity-60">
-                                <img src="../images/google-pay.png" alt=""
-                                    class="block h-full cursor-pointer hover:opacity-60">
-                                <img src="../images/discover.png" alt=""
-                                    class="block h-full cursor-pointer hover:opacity-60">
+                                <img src="../images/visa.png" alt="" class="block h-full cursor-pointer hover:opacity-60">
+                                <img src="../images/paypal.png" alt="" class="block h-full cursor-pointer hover:opacity-60">
+                                <img src="../images/google-pay.png" alt="" class="block h-full cursor-pointer hover:opacity-60">
+                                <img src="../images/discover.png" alt="" class="block h-full cursor-pointer hover:opacity-60">
                             </div>
                         </div>
                         <div class="mt-[20px]">
                             <label for="card-name" class="block mb-[4px] text-base font-medium text-[#242424]">Name on
                                 card</label>
-                            <input type="text" id="card-name"
-                                class="block w-full p-2 text-[#242424] border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-blue-500 focus:border-blue-500">
+                            <input type="text" id="card-name" class="block w-full p-2 text-[#242424] border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-blue-500 focus:border-blue-500">
                         </div>
                         <div class="mt-[20px]">
                             <label for="card-number" class="block mb-[4px] text-base font-medium text-[#242424]">Card
                                 number</label>
-                            <input type="number" id="card-number"
-                                class="block w-full p-2 text-[#242424] border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-blue-500 focus:border-blue-500">
+                            <input type="number" id="card-number" class="block w-full p-2 text-[#242424] border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-blue-500 focus:border-blue-500">
                         </div>
                         <div class="mt-[20px]">
                             <label for="exp-date" class="block mb-[4px] text-base font-medium text-[#242424]">Expiration
                                 date</label>
-                            <input type="text" id="exp-date"
-                                class="block w-full p-2 text-[#242424] border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-blue-500 focus:border-blue-500">
+                            <input type="text" id="exp-date" class="block w-full p-2 text-[#242424] border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-blue-500 focus:border-blue-500">
                         </div>
                         <div class="mt-[20px]">
                             <label for="cvv" class="block mb-[4px] text-base font-medium text-[#242424]">CVV</label>
-                            <input type="number" id="cvv"
-                                class="block w-full p-2 text-[#242424] border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-blue-500 focus:border-blue-500">
+                            <input type="number" id="cvv" class="block w-full p-2 text-[#242424] border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-blue-500 focus:border-blue-500">
                         </div>
                         <div class="flex flex-row justify-start items-center gap-[32px] my-[20px]">
-                            <button type="submit"
-                                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-base px-5 py-2.5 mt-2.5 focus:outline-none">Save
+                            <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-base px-5 py-2.5 mt-2.5 focus:outline-none">Save
                             </button>
-                            <button type="button"
-                                class="text-white bg-[#999999] hover:bg-[#242424] font-medium rounded-lg text-base px-5 py-2.5 mt-2.5 focus:outline-none">Cancel
+                            <button type="button" class="text-white bg-[#999999] hover:bg-[#242424] font-medium rounded-lg text-base px-5 py-2.5 mt-2.5 focus:outline-none">Cancel
                             </button>
                         </div>
                     </div>
@@ -186,36 +151,30 @@
                     <p class="text-2xl font-semibold">Password</p>
                 </div>
                 <div class="w-full md:w-2/3">
-                    <button type="button"
-                        class="text-white bg-[#999999] hover:bg-[#242424] font-medium rounded-lg text-base px-5 py-2.5 mt-2.5 focus:outline-none">Change
+                    <button type="button" class="text-white bg-[#999999] hover:bg-[#242424] font-medium rounded-lg text-base px-5 py-2.5 mt-2.5 focus:outline-none">Change
                         password
                     </button>
                     <div>
                         <label for="old-password" class="block my-[12px] text-base font-medium text-black">Old
                             password</label>
-                        <input type="password" id="old-password"
-                            class="block w-full p-2 text-black border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-blue-500 focus:border-blue-500">
+                        <input type="password" id="old-password" class="block w-full p-2 text-black border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-blue-500 focus:border-blue-500">
                     </div>
                     <div class="my-[20px]">
                         <label for="new-password" class="block my-[12px] text-base font-medium text-black">New
                             password</label>
-                        <input type="password" id="new-password"
-                            class="block w-full p-2 text-black border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-blue-500 focus:border-blue-500">
+                        <input type="password" id="new-password" class="block w-full p-2 text-black border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-blue-500 focus:border-blue-500">
                     </div>
                     <div class="flex flex-row justify-start items-center gap-[32px] my-[20px]">
-                        <button type="submit"
-                            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-base px-5 py-2.5 mt-2.5 focus:outline-none">Save
+                        <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-base px-5 py-2.5 mt-2.5 focus:outline-none">Save
                         </button>
-                        <button type="button"
-                            class="text-white bg-[#999999] hover:bg-[#242424] font-medium rounded-lg text-base px-5 py-2.5 mt-2.5 focus:outline-none">Cancel
+                        <button type="button" class="text-white bg-[#999999] hover:bg-[#242424] font-medium rounded-lg text-base px-5 py-2.5 mt-2.5 focus:outline-none">Cancel
                         </button>
                     </div>
                 </div>
             </div>
         </div>
         <div class="footer bg-[#f2f2f2]">
-            <div
-                class="flex flex-row flex-wrap lg:flex-nowrap lg:py-[24px] lg:px-[193px] md:px-[200px] items-start lg:gap-[82px]  px-[50px] py-[50px]">
+            <div class="flex flex-row flex-wrap lg:flex-nowrap lg:py-[24px] lg:px-[193px] md:px-[200px] items-start lg:gap-[82px]  px-[50px] py-[50px]">
                 <div class="w-1/2 md:w-1/3">
                     <p class="text-base font-semibold py-1">Company</p>
                     <p class="py-1"><a href="#" class="text-base">About Us</a></p>
@@ -240,10 +199,8 @@
                     <p class="py-1">Offer delivered within 4 days after signup.</p>
                     <div class="py-1">
                         <form action="">
-                            <input type="text" id="small-input"
-                                class="block w-full p-2 text-black border border-gray-300 rounded-lg bg-gray-50 sm:text-xs">
-                            <button type="submit" id="add-btn"
-                                class="text-white bg-[#0F6CBD] hover:bg-blue-800 font-medium rounded-md text-sm w-full sm:w-auto px-5 py-2.5 text-center mt-3">Submit</button>
+                            <input type="text" id="small-input" class="block w-full p-2 text-black border border-gray-300 rounded-lg bg-gray-50 sm:text-xs">
+                            <button type="submit" id="add-btn" class="text-white bg-[#0F6CBD] hover:bg-blue-800 font-medium rounded-md text-sm w-full sm:w-auto px-5 py-2.5 text-center mt-3">Submit</button>
                         </form>
                     </div>
                 </div>
