@@ -126,7 +126,6 @@
                         <div class="min-w-[20%]">Shipping</div>
                         <div class="min-w-[20%] flex flex-row justify-start items-center text-xl gap-4">
                             <i class="fa-solid fa-circle-info cursor-pointer"></i>
-                            <i class="fa-solid fa-trash cursor-pointer"></i>
                         </div>
                     </div>
                     <div
@@ -137,7 +136,6 @@
                         <div class="min-w-[20%]">Shipping</div>
                         <div class="min-w-[20%] flex flex-row justify-start items-center text-xl gap-4">
                             <i class="fa-solid fa-circle-info cursor-pointer"></i>
-                            <i class="fa-solid fa-trash cursor-pointer"></i>
                         </div>
                     </div>
                     <div
@@ -148,7 +146,6 @@
                         <div class="min-w-[20%]">Shipping</div>
                         <div class="min-w-[20%] flex flex-row justify-start items-center text-xl gap-4">
                             <i class="fa-solid fa-circle-info cursor-pointer"></i>
-                            <i class="fa-solid fa-trash cursor-pointer"></i>
                         </div>
                     </div>
                 </div>
