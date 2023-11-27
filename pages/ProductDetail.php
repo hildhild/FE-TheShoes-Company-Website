@@ -177,6 +177,7 @@
                 <div><a href="#product-desc">Product Description</a></div>
                 <div><a href="#also-like">You May Also Like</a></div>
                 <div><a href="#also-bought">Customer Also Bought</a></div>
+                <div><a href="#reviews">Reviews</a></div>
             </div>
             <div id="product-desc" class="pb-[20px] border-b border-black">
                 <h2 class="text-2xl font-semibold mt-[20px]">Product Description</h2>
@@ -242,7 +243,7 @@
                     </div>
                 </div>
             </div>
-            <div id="also-bought" class="flex flex-col lg:pb-[60px] pb-[40px]">
+            <div id="also-bought" class="flex flex-col lg:pb-[60px] pb-[40px] border-b border-black">
                 <h2 class="text-2xl font-semibold mt-[20px]">Customer Also Bought</h2>
                 <div class="flex flex-col">
                     <div class="product__img bg-white w-full flex flex-col items-center">
@@ -285,6 +286,72 @@
                                 class="fa-solid fa-chevron-right product__slider-next cursor-pointer"></i></div>
                     </div>
                 </div>
+            </div>
+            <div id="reviews" class="pb-[20px]">
+                <h2 class="text-2xl font-semibold mt-[20px] flex">Reviews (21)</h2>
+                <form action="" class="my-[20px]">
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-1/8">
+                        Write a Review
+                    </button>
+                </form>
+                <div class="review-item py-[20px]">
+                    <p class="text-base font-semibold mt-[5px]">A bit more comfort than expected!</p>
+                    <div class="review-info flex">
+                        <p class="review-own text-base font-semibold mt-[5px] mr-[10px]">Me </p>
+                        <p class="review-date text-base mt-[5px]"> - 25 Oct 2023</p>
+                    </div>
+                    <p class="text-sm text-justify mt-[5px]">
+                        These aren't your typical AF1s! I was surprised at first when I tried it on,
+                        but quickly realized that these shoes are built for the terrain! I took these
+                        out to a local park trail with my son and they're pretty durable! I like the
+                        comfort and the walkability of these shoes in rugged environments, similar to
+                        a trail boot. I think the only thing I would add to this is a bit more color, as
+                        I'm not a huge fan of all-black sneakers. A touch of white or another set of
+                        laces would really make these pop a bit more.
+                    </p>
+                    <form action="" class="mt-[5px] text-lg float-right">
+                        <button class="">
+                            <i class="fa-solid fa-trash" style="color: #000000;"></i>
+                        </button>
+                    </form>
+                </div>
+                <div class="review-item py-[20px]">
+                    <p class="text-base font-semibold mt-[5px]">A bit more comfort than expected!</p>
+                    <div class="review-info flex">
+                        <p class="review-own text-base mt-[5px] mr-[10px]">Victoria</p>
+                        <p class="review-date text-base mt-[5px]"> - 25 Oct 2023</p>
+                    </div>
+                    <p class="text-sm text-justify mt-[5px]">
+                        These aren't your typical AF1s! I was surprised at first when I tried it on,
+                        but quickly realized that these shoes are built for the terrain! I took these
+                        out to a local park trail with my son and they're pretty durable! I like the
+                        comfort and the walkability of these shoes in rugged environments, similar to
+                        a trail boot. I think the only thing I would add to this is a bit more color, as
+                        I'm not a huge fan of all-black sneakers. A touch of white or another set of
+                        laces would really make these pop a bit more.
+                    </p>
+                </div>
+                <div class="review-item py-[20px]">
+                    <p class="text-base font-semibold mt-[5px]">A bit more comfort than expected!</p>
+                    <div class="review-info flex">
+                        <p class="review-own text-base mt-[5px] mr-[10px]">Mr Bean</p>
+                        <p class="review-date text-base mt-[5px]"> - 25 Oct 2023</p>
+                    </div>
+                    <p class="text-sm text-justify mt-[5px]">
+                        These aren't your typical AF1s! I was surprised at first when I tried it on,
+                        but quickly realized that these shoes are built for the terrain! I took these
+                        out to a local park trail with my son and they're pretty durable! I like the
+                        comfort and the walkability of these shoes in rugged environments, similar to
+                        a trail boot. I think the only thing I would add to this is a bit more color, as
+                        I'm not a huge fan of all-black sneakers. A touch of white or another set of
+                        laces would really make these pop a bit more.
+                    </p>
+                </div>
+                <form action="" class="my-[20px]">
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full">
+                        More Reviews
+                    </button>
+                </form>
             </div>
         </div>
         <div class="footer bg-[#f2f2f2]">
