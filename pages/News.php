@@ -19,7 +19,7 @@
         <p class="block">Free shipping on orders above $200 (US only)</p>
         <p class="hidden md:ml-auto md:mr-[56px] mr-[10px]"><a href="./pages/Account.php">User1234</a></p>
         <p class="cursor-pointer hidden"><a href="#">Log out</a></p>
-        <p class="cursor-pointer"><a href="./pages/Login.php">Log in</a></p>
+        <p class="cursor-pointer"><a href="./Login.php">Log in</a></p>
     </div>
     <div class="header flex justify-between lg:px-[60px] px-[34px] bg-[#f2f2f2] fixed top-[30px] left-0 right-0 z-50">
         <div class="header__logo order-2 lg:order-1">

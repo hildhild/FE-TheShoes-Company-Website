@@ -16,7 +16,13 @@
 
 <body>
     <div id="main">
-        <div class="header flex justify-between lg:px-[60px] px-[34px] bg-[#f2f2f2] fixed top-0 left-0 right-0">
+        <div class="sign flex flex-row h-[30px] fixed top-0 left-0 right-0 z-50 items-center md:px-[20px] px-[10px] justify-between bg-[#f2f2f2] text-sm">
+            <p class="block">Free shipping on orders above $200 (US only)</p>
+            <p class="hidden md:ml-auto md:mr-[56px] mr-[10px]"><a href="./pages/Account.php">User1234</a></p>
+            <p class="cursor-pointer hidden"><a href="#">Log out</a></p>
+            <p class="cursor-pointer"><a href="./Login.php">Log in</a></p>
+        </div>
+        <div class="header flex justify-between lg:px-[60px] px-[34px] bg-[#f2f2f2] fixed top-[30px] left-0 right-0">
             <div class="header__logo order-2 lg:order-1">
                 <img src="../images/logo.svg" alt="">
             </div>
