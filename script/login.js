@@ -9,21 +9,22 @@ function handleHeader() {
   if (token) {
     loginButton.style.display = "block";
     logoutButton.style.display = "none";
+    userNameField.style.display = "none";
   } else {
     loginButton.style.display = "none";
     logoutButton.style.display = "block";
+    userNameField.style.display = "none";
   }
 
   logoutButton_child.addEventListener("click", function () {
-    console.log("Logout button clicked");
     localStorage.removeItem("token");
     location.reload();
   });
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  handleHeader();
+handleHeader();
 
+document.addEventListener("DOMContentLoaded", function () {
   var buttonSubmit = document.getElementById("btnSubmit");
 
   buttonSubmit.addEventListener("click", function (event) {
@@ -49,7 +50,8 @@ document.addEventListener("DOMContentLoaded", function () {
         .then((data) => {
           console.log("Server response:", data);
           window.localStorage.setItem("token", data.token);
-          handleRender();
+          location.reload();
+          window.location.href = "/index.html";
         })
         .catch((error) => {
           console.error("Error:", error);
@@ -58,4 +60,6 @@ document.addEventListener("DOMContentLoaded", function () {
       alert("Please enter both email and password.");
     }
   });
+
+  handleHeader();
 });
