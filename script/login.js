@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
         .then((data) => {
           console.log("Server response:", data);
           window.localStorage.setItem("token", data.token);
-          handleRender();
+          handleHeader();
         })
         .catch((error) => {
           console.error("Error:", error);
