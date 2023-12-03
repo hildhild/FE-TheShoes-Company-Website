@@ -1,5 +1,5 @@
 function getNews() {
-    const getNewsURL = "http://172.16.1.122:8000/news";
+    const getNewsURL = "http://localhost:8000/news";
     fetch(getNewsURL)
         .then(response => {
             if (!response.ok) {

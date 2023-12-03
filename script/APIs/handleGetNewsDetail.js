@@ -1,7 +1,7 @@
 var newsId = window.location.search.slice(4);
 
 function getNewsDetail() {
-    const getNewsURL = "http://172.16.1.122:8000/news/";
+    const getNewsURL = "http://localhost:8000/news/";
     fetch(getNewsURL + newsId)
         .then(response => {
             if (!response.ok) {
@@ -22,12 +22,13 @@ function addNewsComment(postData) {
     const requestOptions = {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${localStorage.getItem("token")}`
         },
         body: JSON.stringify(postData)
     }
 
-    const URL = `http://172.16.1.122:8000/news/${newsId}/comment`;
+    const URL = `http://localhost:8000/news/${newsId}/comment`;
     fetch(URL, requestOptions)
         .then(response => {
             if (!response.ok) {
@@ -83,7 +84,15 @@ function displayNewsDetail(data, comments) {
     newsDetailContainer.innerHTML += html;
     document.getElementById("submit-add-cmt").addEventListener('click', () => {
         const commentContent = document.getElementById("comment-content").value;
-        
+        const params = {
+            user_id: 1,
+            content: commentContent,
+            title: commentContent,
+            user_name: "",
+            avatar_url: ""
+        }
+        addNewsComment(params);
+        location.reload();
     })
 }
 

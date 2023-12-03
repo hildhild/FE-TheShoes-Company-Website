@@ -1,5 +1,5 @@
 function getProducts() {
-    const getProductURL = "http://172.16.1.122:8000/product";
+    const getProductURL = "http://localhost:8000/product";
     fetch(getProductURL)
         .then(response => {
             if (!response.ok) {
