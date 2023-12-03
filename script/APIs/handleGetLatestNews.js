@@ -16,7 +16,7 @@ function getLatestNews() {
         });
 }
 
-getLastestNews();
+getLatestNews();
 function displayLatestNews(data) {
     const latestNewsContainer = document.getElementById('latest-news-container');
     let html = "";
@@ -26,7 +26,7 @@ function displayLatestNews(data) {
         <div class="w-full lg:w-1/3">
             <a href="./NewsDetail.html?id=${value.news_id}" class="block">
                 <div class="mb-2">
-                    <img src="${value.img}" alt="">
+                    <img src="${value.image_url}" alt="">
                 </div>
                     <p class="text-base font-semibold">${value.title}</p>
                     <p class="text-sm">${value.content}</p>
@@ -34,5 +34,5 @@ function displayLatestNews(data) {
         </div>
         `
     })
-    newsContainer.innerHTML = html;
+    latestNewsContainer.innerHTML = html;
 }
