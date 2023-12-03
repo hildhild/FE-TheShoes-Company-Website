@@ -9,8 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;700;900&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/f776702b05.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../../css/main.css">
-    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Document</title>
 </head>
 
@@ -18,13 +18,13 @@
     <div id="main">
         <div class="sign flex flex-row h-[30px] fixed top-0 left-0 right-0 z-50 items-center md:px-[20px] px-[10px] justify-between bg-[#f2f2f2] text-sm">
             <p class="block">Free shipping on orders above $200 (US only)</p>
-            <p class="hidden md:ml-auto md:mr-[56px] mr-[10px]"><a href="./pages/Account.php">User1234</a></p>
+            <p class="hidden md:ml-auto md:mr-[56px] mr-[10px]"><a href="./pages/Account.html">User1234</a></p>
             <p class="cursor-pointer hidden"><a href="#">Log out</a></p>
-            <p class="cursor-pointer"><a href="../pages/Login.php">Log in</a></p>
+            <p class="cursor-pointer"><a href="./Login.html">Log in</a></p>
         </div>
         <div class="header flex justify-between lg:px-[60px] px-[34px] bg-[#f2f2f2] fixed top-[30px] left-0 right-0 z-50">
             <div class="header__logo order-2 lg:order-1">
-                <img src="../../images/logo.svg" alt="">
+                <img src="../images/logo.svg" alt="">
             </div>
             <div class="header__navbar flex items-center order-1 lg:order-2 lg:mr-auto lg:ml-[62px]">
                 <i class="header__navbar-icon lg:hidden fa-solid fa-bars text-3xl"></i>
@@ -38,13 +38,15 @@
                         </form>
                     </div>
 
-                    <div class="header__navbar-item w-full"><a href="../../index.php" class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl">Home</a>
+                    <div class="header__navbar-item w-full"><a href="../index.html" class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl">Home</a>
                     </div>
                     <div class="header__navbar-item w-full"><a href="#" class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl">Products</a>
                     </div>
-                    <div class="header__navbar-item w-full"><a href="../News.php" class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl">News</a>
+                    <div class="header__navbar-item w-full"><a href="../pages/OrderHistory.html" class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl">History</a>
                     </div>
-                    <div class="header__navbar-item w-full"><a href="../About.php" class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl">About</a>
+                    <div class="header__navbar-item w-full"><a href="./News.html" class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl">News</a>
+                    </div>
+                    <div class="header__navbar-item w-full"><a href="./About.html" class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl">About</a>
                     </div>
                 </div>
             </div>
@@ -66,29 +68,22 @@
             </div>
         </div>
         <div class="lg:px-[100px] px-[20px] py-[50px] mt-[95px]">
-            <div class="flex flex-row items-center justify-start gap-[10px]">
-                <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-base px-5 py-2.5 focus:outline-none">Edit
-                </button>
-                <button type="button" class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-base px-5 py-2.5">Delete
-                </button>
-
-            </div>
-            <div class="flex flex-row flex-start items-center gap-[10px] mt-[20px]">
+            <div class="flex flex-row flex-start items-center gap-[10px]">
                 <i class="fa-solid fa-chevron-left cursor-pointer block"></i>
-                <p class="text-base underline underline-offset-4"><a href="./Product_admin.php">Back to product</a></p>
+                <p class="text-base underline underline-offset-4"><a href="./Product.html">Back to product</a></p>
             </div>
             <div class="flex flex-col">
                 <div class="product__img bg-white w-full flex justify-center self-center">
-                    <img src="../../images/puma.png" alt="" class="block w-1/2">
+                    <img src="../images/puma.png" alt="" class="block w-1/2">
                 </div>
                 <div class="product__img bg-white w-full flex justify-center self-center my-hidden">
-                    <img src="../../images/puma.png" alt="" class="block w-1/2">
+                    <img src="../images/puma.png" alt="" class="block w-1/2">
                 </div>
                 <div class="product__img bg-white w-full flex justify-center self-center my-hidden">
-                    <img src="../../images/puma.png" alt="" class="block w-1/2">
+                    <img src="../images/puma.png" alt="" class="block w-1/2">
                 </div>
                 <div class="product__img bg-white w-full flex justify-center self-center my-hidden">
-                    <img src="../../images/puma.png" alt="" class="block w-1/2">
+                    <img src="../images/puma.png" alt="" class="block w-1/2">
                 </div>
                 <div class="w-full items-center justify-center text-center py-2 product__slider-change mt-[22px]">
                     <div class="inline-block mr-[70px]"><i class="fa-solid fa-chevron-left product__slider-prev cursor-pointer"></i>
@@ -105,7 +100,7 @@
                 </div>
             </div>
             <div class="flex flex-col md:flex-row justify-between self-center mt-[20px]">
-                <div class="flex flex-col gap-[10px]" contenteditable="true">
+                <div class="flex flex-col gap-[10px]">
                     <p class="text-2xl font-semibold">Puma Men's Caven Sneaker</p>
                     <p class="text-2xl font-semibold">$79.99</p>
                     <p class="text-base"><span class="font-semibold">Colour </span>PUMA WHITE/PUMA BLACK</p>
@@ -155,6 +150,7 @@
                 <div><a href="#product-desc">Product Description</a></div>
                 <div><a href="#also-like">You May Also Like</a></div>
                 <div><a href="#also-bought">Customer Also Bought</a></div>
+                <div><a href="#reviews">Reviews</a></div>
             </div>
             <div id="product-desc" class="pb-[20px] border-b border-black">
                 <h2 class="text-2xl font-semibold mt-[20px]">Product Description</h2>
@@ -180,22 +176,22 @@
                 <h2 class="text-2xl font-semibold mt-[20px]">You May Also Like</h2>
                 <div class="flex flex-col">
                     <div class="product__img bg-white w-full flex flex-col items-center">
-                        <img src="../../images/puma.png" alt="" class="block w-1/2">
+                        <img src="../images/puma.png" alt="" class="block w-1/2">
                         <p class="text-base font-semibold">Puma Men's Caven Sneaker 1</p>
                         <p class="text-base font-semibold">$79.99</p>
                     </div>
                     <div class="product__img bg-white w-full flex flex-col items-center">
-                        <img src="../../images/puma.png" alt="" class="block w-1/2">
+                        <img src="../images/puma.png" alt="" class="block w-1/2">
                         <p class="text-base font-semibold">Puma Men's Caven Sneaker 2</p>
                         <p class="text-base font-semibold">$89.99</p>
                     </div>
                     <div class="product__img bg-white w-full flex flex-col items-center">
-                        <img src="../../images/puma.png" alt="" class="block w-1/2">
+                        <img src="../images/puma.png" alt="" class="block w-1/2">
                         <p class="text-base font-semibold">Puma Men's Caven Sneaker 3</p>
                         <p class="text-base font-semibold">$99.99</p>
                     </div>
                     <div class="product__img bg-white w-full flex flex-col items-center">
-                        <img src="../../images/puma.png" alt="" class="block w-1/2">
+                        <img src="../images/puma.png" alt="" class="block w-1/2">
                         <p class="text-base font-semibold">Puma Men's Caven Sneaker 4</p>
                         <p class="text-base font-semibold">$109.99</p>
                     </div>
@@ -214,26 +210,26 @@
                     </div>
                 </div>
             </div>
-            <div id="also-bought" class="flex flex-col lg:pb-[60px] pb-[40px]">
+            <div id="also-bought" class="flex flex-col lg:pb-[60px] pb-[40px] border-b border-black">
                 <h2 class="text-2xl font-semibold mt-[20px]">Customer Also Bought</h2>
                 <div class="flex flex-col">
                     <div class="product__img bg-white w-full flex flex-col items-center">
-                        <img src="../../images/puma.png" alt="" class="block w-1/2">
+                        <img src="../images/puma.png" alt="" class="block w-1/2">
                         <p class="text-base font-semibold">Puma Men's Caven Sneaker 1</p>
                         <p class="text-base font-semibold">$79.99</p>
                     </div>
                     <div class="product__img bg-white w-full flex flex-col items-center">
-                        <img src="../../images/puma.png" alt="" class="block w-1/2">
+                        <img src="../images/puma.png" alt="" class="block w-1/2">
                         <p class="text-base font-semibold">Puma Men's Caven Sneaker 2</p>
                         <p class="text-base font-semibold">$89.99</p>
                     </div>
                     <div class="product__img bg-white w-full flex flex-col items-center">
-                        <img src="../../images/puma.png" alt="" class="block w-1/2">
+                        <img src="../images/puma.png" alt="" class="block w-1/2">
                         <p class="text-base font-semibold">Puma Men's Caven Sneaker 3</p>
                         <p class="text-base font-semibold">$99.99</p>
                     </div>
                     <div class="product__img bg-white w-full flex flex-col items-center">
-                        <img src="../../images/puma.png" alt="" class="block w-1/2">
+                        <img src="../images/puma.png" alt="" class="block w-1/2">
                         <p class="text-base font-semibold">Puma Men's Caven Sneaker 4</p>
                         <p class="text-base font-semibold">$109.99</p>
                     </div>
@@ -251,6 +247,70 @@
                         <div class="inline-block ml-[70px]"><i class="fa-solid fa-chevron-right product__slider-next cursor-pointer"></i></div>
                     </div>
                 </div>
+            </div>
+            <div id="reviews" class="pb-[20px]">
+                <h2 class="text-2xl font-semibold mt-[20px] flex">Reviews (21)</h2>
+                <form action="" class="my-[20px]">
+                    <textarea name="review-content" id="review-content" rows="3" class="w-full border-gray border-2 rounded-lg p-[20px]"></textarea>
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-1/8">
+                        Write a Review
+                    </button>
+                </form>
+                <div class="review-item py-[20px]">
+                    <div class="review-info flex">
+                        <p class="review-own text-base font-semibold mt-[5px] mr-[10px]">Me </p>
+                        <p class="review-date text-base font-semibold mt-[5px]"> - 25 Oct 2023</p>
+                    </div>
+                    <p class="text-sm text-justify mt-[5px]">
+                        These aren't your typical AF1s! I was surprised at first when I tried it on,
+                        but quickly realized that these shoes are built for the terrain! I took these
+                        out to a local park trail with my son and they're pretty durable! I like the
+                        comfort and the walkability of these shoes in rugged environments, similar to
+                        a trail boot. I think the only thing I would add to this is a bit more color, as
+                        I'm not a huge fan of all-black sneakers. A touch of white or another set of
+                        laces would really make these pop a bit more.
+                    </p>
+                    <form action="" class="mt-[5px] text-lg float-right">
+                        <button class="">
+                            <i class="fa-solid fa-trash" style="color: #000000;"></i>
+                        </button>
+                    </form>
+                </div>
+                <div class="review-item py-[20px]">
+                    <div class="review-info flex">
+                        <p class="review-own text-base font-semibold mt-[5px] mr-[10px]">Victoria</p>
+                        <p class="review-date text-base font-semibold mt-[5px]"> - 25 Oct 2023</p>
+                    </div>
+                    <p class="text-sm text-justify mt-[5px]">
+                        These aren't your typical AF1s! I was surprised at first when I tried it on,
+                        but quickly realized that these shoes are built for the terrain! I took these
+                        out to a local park trail with my son and they're pretty durable! I like the
+                        comfort and the walkability of these shoes in rugged environments, similar to
+                        a trail boot. I think the only thing I would add to this is a bit more color, as
+                        I'm not a huge fan of all-black sneakers. A touch of white or another set of
+                        laces would really make these pop a bit more.
+                    </p>
+                </div>
+                <div class="review-item py-[20px]">
+                    <div class="review-info flex">
+                        <p class="review-own text-base font-semibold mt-[5px] mr-[10px]">Mr Bean</p>
+                        <p class="review-date text-base font-semibold mt-[5px]"> - 25 Oct 2023</p>
+                    </div>
+                    <p class="text-sm text-justify mt-[5px]">
+                        These aren't your typical AF1s! I was surprised at first when I tried it on,
+                        but quickly realized that these shoes are built for the terrain! I took these
+                        out to a local park trail with my son and they're pretty durable! I like the
+                        comfort and the walkability of these shoes in rugged environments, similar to
+                        a trail boot. I think the only thing I would add to this is a bit more color, as
+                        I'm not a huge fan of all-black sneakers. A touch of white or another set of
+                        laces would really make these pop a bit more.
+                    </p>
+                </div>
+                <form action="" class="my-[20px]">
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full">
+                        More Reviews
+                    </button>
+                </form>
             </div>
         </div>
         <div class="footer bg-[#f2f2f2]">
@@ -287,8 +347,8 @@
             </div>
         </div>
     </div>
-    <script src="../../script/header.js"></script>
-    <script src="../../script/ProductDetail.js"></script>
+    <script src="../script/header.js"></script>
+    <script src="../script/ProductDetail.js"></script>
 </body>
 
 </html>
