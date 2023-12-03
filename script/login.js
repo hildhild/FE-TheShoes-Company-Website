@@ -50,8 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
         .then((data) => {
           console.log("Server response:", data);
           window.localStorage.setItem("token", data.token);
-          location.reload();
-          window.location.href = "/index.html";
+          handleHeader();
         })
         .catch((error) => {
           console.error("Error:", error);
