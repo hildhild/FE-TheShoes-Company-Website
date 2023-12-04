@@ -18,12 +18,38 @@ function getProductDetail() {
             console.error('There was a problem with the fetch operation:', error);
         });
 }
+function addtoCart(postData) {
+    const requestOptions = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${sessionStorage.getItem("token")}`
+        },
+        body: JSON.stringify(postData)
+    }
 
+    const URL = `http://localhost:8000/order/addProductToCart`;
+    fetch(URL, requestOptions)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log('POST request successful:', data);
+        })
+        .catch(error => {
+            console.error('There was a problem with the POST request:', error);
+        });
+
+}
 getProductDetail();
 
 function displayProductDetail(data) {
     const detailContainer = document.getElementById("product-detail-container");
     let html = "";
+    html += `<div class="flex flex-col gap-[10px]">`;
     html += `<p class="text-2xl font-semibold">${data.product_name}</p>`;
     html += `<p class="text-2xl font-semibold">${data.price}</p>`;
     html += `<p class="text-base"><span class="font-semibold">Colour </span>${data.color}</p>`;
@@ -32,12 +58,27 @@ function displayProductDetail(data) {
     html += `<div class="flex flex-row flex-wrap text-base gap-[10px]">`;
 
     const sizes = data.combined_sizes.split(',');
+    html += `<select id="size" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">`
     sizes.forEach((val, index) => {
-        html += `
-        <div class="h-[32px] w-[48px] bg-[#d9d9d9] flex justify-center items-center cursor-pointer hover:bg-[#a9a9a9]">${val}</div>
-        `
+        html += `<option value=${val}>${val}</option>`
     })
+    html += `</select>`;
+    html += `
+    <div class="mt-4 block w-full">
+    <label for="quantity" class="text-base font-semibold">Choose quantity</label>
+    <input value="1" min="1" step="1" id="quantity" name="quantity" type="number" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+  </div>
+  
+    `
     html += `</div>`;
+    html += `</div>`;
+
+    html += `<div class="mt-[32px] md:mt-0">
+    <button id="add-to-cart-btn" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-base px-5 py-2.5 mt-2.5 focus:outline-none md:min-w-[180px]">Add
+        to cart
+        <i class="fa-solid fa-arrow-right inline-block ml-[30px]"></i>
+    </button>
+</div>`;
     detailContainer.innerHTML = html;
 
     const desc = document.getElementById("product-desc");
@@ -47,6 +88,20 @@ function displayProductDetail(data) {
     descHtml += `<p class="text-base font-semibold mt-[20px]">${data.product_name}</p>`;
     descHtml += `<p class="text-sm text-justify mt-[20px]">${data.description}</p>`;
     desc.innerHTML = descHtml;
+
+    document.getElementById("add-to-cart-btn").addEventListener('click', () => {
+        const params = {
+            "product_id": Number(proId),
+            "size": Number(document.getElementById('size').value),
+            "quantity": Number(document.getElementById('quantity').value),
+            "price": Number(`${data.price}`),
+            "product_name": `${data.product_name}`,
+            "thumbnail": `${data.combined_thumbnails[0]}`,
+            "color": `${data.color}`
+        }
+        addtoCart(params);
+        location.reload();
+    })
 }
 
 function displayComments(data) {
