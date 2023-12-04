@@ -33,7 +33,7 @@
           <a href="#" id="logoutbutton1.1">Log out</a>
         </p>
         <p class="cursor-pointer" id="loginbutton1">
-          <a   id="loginbutton1.1" href="./Login.html">Log in</a>
+          <a id="loginbutton1.1" href="./Login.html">Log in</a>
         </p>
       </div>
       <div
@@ -132,7 +132,9 @@
             <i class="fa-solid fa-cart-shopping"></i>
           </div>
           <div class="header__user text-2xl px-4 py-[16.5px] cursor-pointer">
-            <i class="fa-solid fa-user"></i>
+            <a href="./Account.html" id="userName">
+              <i class="fa-solid fa-user"></i>
+            </a>
           </div>
         </div>
       </div>
@@ -180,7 +182,7 @@
             Don't have an account? Sign up instead
           </h2>
           <div class="w-full md:w-[300px]">
-            <form action="">
+            <form action="" onsubmit="handleRegister()">
               <div>
                 <label
                   for="register-name"
@@ -319,5 +321,6 @@
     </div>
     <script src="../script/header.js"></script>
     <script src="../script/login.js"></script>
+    <script src="../script/register.js"></script>
   </body>
- </html>
+</html>

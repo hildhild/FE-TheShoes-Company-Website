@@ -57,12 +57,12 @@ function handleLogin() {
         sessionStorage.setItem("user_name", data.data.user_name);
         sessionStorage.setItem("email", data.data.email);
         sessionStorage.setItem("role", data.data.role);
+
         handleHeader();
         window.location.href = "/index.html";
       })
       .catch((error) => {
-        console.error("Error:", error); 
-        alert("Login failed.");
+        console.error("Error:", error);
       });
   } else {
     alert("Please enter both email and password.");

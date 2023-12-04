@@ -1,48 +1,29 @@
-function handleHeader() {
-  var token = sessionStorage.getItem("token");
-  var user_name = sessionStorage.getItem("user_name");
-
-  var loginButton = document.getElementById("loginbutton1.1");
-  var logoutButton = document.getElementById("logoutbutton1.1");
-  var userNameField = document.getElementById("userName");
-  userNameField.textContent = user_name;
-
-  if (token) {
-    loginButton.classList.add("hidden");
-    logoutButton.classList.add("inline-block");
-    userNameField.classList.add("inline-block");
-  } else {
-    loginButton.classList.add("inline-block");
-    logoutButton.classList.add("hidden");
-    userNameField.classList.add("hidden");
-  }
-
-  logoutButton.addEventListener("click", function () {
-    sessionStorage.removeItem("token");
-    sessionStorage.removeItem("user_id");
-    sessionStorage.removeItem("user_name");
-    sessionStorage.removeItem("email");
-    sessionStorage.removeItem("role");
-    location.reload();
-    console.log("Clickl logout");
-  });
-}
-handleHeader();
-
-function handleLogin() {
+function handleRegister() {
   event.preventDefault();
 
-  var emailValue = document.getElementById("email").value;
-  var passwordValue = document.getElementById("password").value;
+  const nameValue = document.getElementById("register-name").value;
+  const emailValue = document.getElementById("register-email").value;
+  const passwordValue = document.getElementById("register-password").value;
+  const confirmPasswordValue = document.getElementById(
+    "register-password-confirm"
+  ).value;
 
-  if (emailValue && passwordValue) {
-    var data = {
+  if (nameValue && emailValue && passwordValue && confirmPasswordValue) {
+    if (passwordValue !== confirmPasswordValue) {
+      alert("Passwords do not match.");
+      return;
+    }
+
+    const data = {
+      name: nameValue,
       email: emailValue,
       password: passwordValue,
+      confirm_password: confirmPasswordValue,
     };
 
-    console.log(data);
-    fetch("http://localhost:8000/auth/login", {
+    console.log("Sending data to the server:", data);
+
+    fetch("http://localhost:8000/auth/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -52,19 +33,14 @@ function handleLogin() {
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
-        sessionStorage.setItem("token", data.token);
-        sessionStorage.setItem("user_id", data.data.user_id);
-        sessionStorage.setItem("user_name", data.data.user_name);
-        sessionStorage.setItem("email", data.data.email);
-        sessionStorage.setItem("role", data.data.role);
-        handleHeader();
-        window.location.href = "/index.html";
+        alert("Registration successful. Please log in.");
+        // Redirect to login page or handle as needed
       })
       .catch((error) => {
         console.error("Error:", error);
-        alert("Login failed.");
+        alert("Registration failed. Please try again.");
       });
   } else {
-    alert("Please enter both email and password.");
+    alert("Please fill in all fields.");
   }
 }
