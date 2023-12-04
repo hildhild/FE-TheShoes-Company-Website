@@ -23,16 +23,17 @@ function displayLatestNews(data) {
     data.slice(0, 3).forEach((value, index) => {
         
         html += `
-        <div class="w-full lg:w-1/3">
+        <div class="w-full lg:w-1/3 flex">
             <a href="./NewsDetail.html?id=${value.news_id}" class="block">
                 <div class="mb-2">
-                    <img src="${value.img}" alt="">
+                    <img src="${value.image_url}" alt="">
                 </div>
                     <p class="text-base font-semibold">${value.title}</p>
-                    <p class="text-sm">${value.content}</p>
+                    <p class="text-sm">${value.content.substring(0,200)}...</p>
+
             </a>
         </div>
         `
     })
-    newsContainer.innerHTML = html;
+    latestNewsContainer.innerHTML = html;
 }
