@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
         password: passwordValue,
       };
 
-      fetch("http://172.16.1.122:8000/auth/login", {
+      fetch("http://localhost:8000/auth/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
