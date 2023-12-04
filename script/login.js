@@ -57,7 +57,6 @@ function handleLogin() {
         sessionStorage.setItem("user_name", data.data.user_name);
         sessionStorage.setItem("email", data.data.email);
         sessionStorage.setItem("role", data.data.role);
-
         handleHeader();
         window.location.href = "/index.html";
       })
