@@ -1,7 +1,7 @@
 var newsId = window.location.search.slice(4);
 
 function getNewsDetail() {
-    const getNewsURL = "http://localhost:8000/news";
+    const getNewsURL = "http://localhost:8000/news/";
     fetch(getNewsURL + newsId)
         .then(response => {
             if (!response.ok) {
