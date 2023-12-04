@@ -22,120 +22,119 @@
   <body>
     <div id="main">
       <div
-        class="sign flex flex-row h-[30px] fixed top-0 left-0 right-0 z-50 items-center md:px-[20px] px-[10px] justify-between bg-[#f2f2f2] text-sm"
-      >
-        <p class="md:ml-auto md:mr-[56px] mr-[10px]">
-          <a href="./Account.html" id="userName">User1234</a>
-        </p>
-        <p class="cursor-pointer" id="logoutbutton1">
-          <a href="#" id="logoutbutton1.1">Log out</a>
-        </p>
-        <p class="cursor-pointer" id="loginbutton1">
-          <a id="loginbutton1.1" href="./Login.html">Log in</a>
-        </p>
+      class="sign flex flex-row h-[30px] fixed top-0 left-0 right-0 z-50 items-center md:px-[20px] px-[10px] justify-between bg-[#f2f2f2] text-sm"
+    >
+      <p class="block">Free shipping on orders above $200 (US only)</p>
+      <p class="md:ml-auto md:mr-[56px] mr-[10px]">
+        <a href="./Account.html" id="userName">User1234</a>
+      </p>
+      <p class="cursor-pointer" id="logoutbutton1">
+        <a href="#" id="logoutbutton1.1">Log out</a>
+      </p>
+      <p class="cursor-pointer" id="loginbutton1">
+        <a id="loginbutton1.1" href="./Login.html">Log in</a>
+      </p>
+    </div>
+    <div
+      class="header flex justify-between lg:px-[60px] px-[34px] bg-[#f2f2f2] fixed top-[30px] left-0 right-0 z-50"
+    >
+      <div class="header__logo order-2 lg:order-1">
+        <img src="../images/logo.svg" alt="" />
       </div>
       <div
-        class="header flex justify-between lg:px-[60px] px-[34px] bg-[#f2f2f2] fixed top-[30px] left-0 right-0 z-50"
+        class="header__navbar flex items-center order-1 lg:order-2 lg:mr-auto lg:ml-[62px]"
       >
-        <div class="header__logo order-2 lg:order-1">
-          <img src="../images/logo.svg" alt="" />
-        </div>
+        <i class="header__navbar-icon lg:hidden fa-solid fa-bars text-3xl"></i>
         <div
-          class="header__navbar flex items-center order-1 lg:order-2 lg:mr-auto lg:ml-[62px]"
+          class="header__navbar-container custom-hidden flex flex-col absolute top-[65px] left-0 right-0 items-start lg:static lg:flex-row lg:items-center bg-white lg:bg-[#f2f2f2]"
         >
-          <i
-            class="header__navbar-icon lg:hidden fa-solid fa-bars text-3xl"
-          ></i>
           <div
-            class="header__navbar-container custom-hidden flex flex-col absolute top-[65px] left-0 right-0 items-start lg:static lg:flex-row lg:items-center bg-white lg:bg-[#f2f2f2]"
+            class="lg:hidden header__search-container header__navbar-item w-full md:px-[25px] px-[18px] py-[10px] relative"
           >
-            <div
-              class="lg:hidden header__search-container header__navbar-item w-full md:px-[25px] px-[18px] py-[10px] relative"
-            >
-              <form action="">
-                <input
-                  type="text"
-                  id="search-info"
-                  class="bg-gray-50 border border-gray-300 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-2.5 pl-2.5 pr-12"
-                  placeholder="Search..."
-                  required
-                />
-                <div
-                  class="header__search text-2xl px-4 absolute bottom-1/2 translate-y-1/2 right-[2%]"
-                >
-                  <button type="submit" class="px-2 py-1">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                  </button>
-                </div>
-              </form>
-            </div>
-
-            <div class="header__navbar-item w-full">
-              <a
-                href="../index.html"
-                class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl"
-                >Home</a
-              >
-            </div>
-            <div class="header__navbar-item w-full">
-              <a
-                href="#"
-                class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl"
-                >Products</a
-              >
-            </div>
-            <div class="header__navbar-item w-full">
-              <a
-                href="../pages/OrderHistory.html"
-                class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl"
-                >History</a
-              >
-            </div>
-            <div class="header__navbar-item w-full">
-              <a
-                href="./News.html"
-                class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl"
-                >News</a
-              >
-            </div>
-            <div class="header__navbar-item w-full">
-              <a
-                href="./About.html"
-                class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl"
-                >About</a
-              >
-            </div>
-          </div>
-        </div>
-        <div
-          class="header__lg-search hidden lg:block text-2xl px-4 py-[10px] cursor-pointer order-3 relative min-w-[25%]"
-        >
-          <i
-            class="fa-solid fa-magnifying-glass absolute bottom-1/2 translate-y-1/2 right-[10%]"
-          ></i>
-          <div class="header__lg-search">
             <form action="">
               <input
                 type="text"
                 id="search-info"
-                class="bg-gray-50 border border-gray-300 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-2.5 pl-2.5 pr-12"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-2.5 pl-2.5 pr-12"
                 placeholder="Search..."
                 required
               />
+              <div
+                class="header__search text-2xl px-4 absolute bottom-1/2 translate-y-1/2 right-[2%]"
+              >
+                <button type="submit" class="px-2 py-1">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+              </div>
             </form>
           </div>
-        </div>
-        <div class="header__icon flex items-center order-4">
-          <div class="header__cart text-2xl px-4 py-[16.5px] cursor-pointer">
-            <i class="fa-solid fa-cart-shopping"></i>
+
+          <div class="header__navbar-item w-full">
+            <a
+              href="../index.html"
+              class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl"
+              >Home</a
+            >
           </div>
-          <div class="header__user text-2xl px-4 py-[16.5px] cursor-pointer">
-            <a href="./Account.html" id="userName">
-              <i class="fa-solid fa-user"></i>
-            </a>
+          <div class="header__navbar-item w-full">
+            <a
+              href="./Product.html"
+              class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl"
+              >Products</a
+            >
+          </div>
+          <div class="header__navbar-item w-full">
+            <a
+              href="../pages/OrderHistory.html"
+              class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl"
+              >History</a
+            >
+          </div>
+          <div class="header__navbar-item w-full">
+            <a
+              href="#"
+              class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl"
+              >News</a
+            >
+          </div>
+          <div class="header__navbar-item w-full">
+            <a
+              href="./About.html"
+              class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl"
+              >About</a
+            >
           </div>
         </div>
       </div>
+      <div
+        class="header__lg-search hidden lg:block text-2xl px-4 py-[10px] cursor-pointer order-3 relative min-w-[25%]"
+      >
+        <i
+          class="fa-solid fa-magnifying-glass absolute bottom-1/2 translate-y-1/2 right-[10%]"
+        ></i>
+        <div class="header__lg-search">
+          <form action="">
+            <input
+              type="text"
+              id="search-info"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-2.5 pl-2.5 pr-12"
+              placeholder="Search..."
+              required
+            />
+          </form>
+        </div>
+      </div>
+      <div class="header__icon flex items-center order-4">
+        <div class="header__cart text-2xl px-4 py-[16.5px] cursor-pointer">
+          <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+        <div class="header__user text-2xl px-4 py-[16.5px] cursor-pointer">
+          <a href="./Account.html" id="userName">
+            <i class="fa-solid fa-user"></i>
+          </a>
+        </div>
+      </div>
+    </div>
       <div class="lg:px-[100px] px-[20px] py-[50px] mt-[95px]">
         <div class="flex flex-row flex-start items-center gap-[10px]">
           <i class="fa-solid fa-chevron-left cursor-pointer block"></i>
@@ -198,15 +197,6 @@
             class="flex flex-col gap-[10px]"
             id="product-detail-container"
           ></div>
-          <div class="mt-[32px] md:mt-0">
-            <button
-              type="button"
-              class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-base px-5 py-2.5 mt-2.5 focus:outline-none md:min-w-[180px]"
-            >
-              Add to cart
-              <i class="fa-solid fa-arrow-right inline-block ml-[30px]"></i>
-            </button>
-          </div>
         </div>
         <div
           class="flex flex-col md:flex-row md:px-[84px] py-[12px] items-start md:items-center justify-between lg:mt-[90px] md:mt-[44px] mt-[24px] gap-[20px] text-base font-semibold border-t border-b border-black"
