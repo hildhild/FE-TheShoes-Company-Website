@@ -36,6 +36,10 @@ function displayMyOrders(orders) {
     var countOrderedOrders = 0;
     let html = "";
     orders.forEach((value) => {
+        var totalMoney = 0;
+        value.items.forEach((value) => {
+            totalMoney += value.total_money;
+        });
         countTotalOrders ++;
         if (value.order_status == 'shipping') {
             countShippingOrders ++;
@@ -50,7 +54,7 @@ function displayMyOrders(orders) {
             <div class="flex flex-row text-base text-black bg-white p-[20px] border border-[#d1d1d1] rounded-lg mt-2.5 items-center">
                 <div class="min-w-[10%]">${value.order_id}</div>
                 <div class="min-w-[30%]">${value.items[0].created_at}</div>
-                <div class="min-w-[20%]">$${value.items[0].total_money}</div>
+                <div class="min-w-[20%]">$${totalMoney}</div>
                 <div class="min-w-[20%]">${value.order_status}</div>
                 <div class="min-w-[20%] flex flex-row justify-start items-center text-xl gap-4">
                     <a href="./OrderDetail.html?id=${value.order_id}" class="block">
