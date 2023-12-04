@@ -1,7 +1,7 @@
 var newsId = window.location.search.slice(4);
 
-function getNewsDetail() {
-    const getNewsURL = "http://localhost:8000/news";
+function getOrderDetail() {
+    const getNewsURL = "http://localhost:8000/buying-history";
     fetch(getNewsURL + newsId)
         .then(response => {
             if (!response.ok) {
@@ -11,41 +11,14 @@ function getNewsDetail() {
         })
         .then(data => {
             console.log(data);
-            displayNewsDetail(data.data[0], data.commnents);
+            displayOrderDetail(data.data[0], data.commnents);
         })
         .catch(error => {
             console.error('There was a problem with the fetch operation:', error);
         });
 }
 
-function addNewsComment(postData) {
-    const requestOptions = {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${sessionStorage.getItem("token")}`
-        },
-        body: JSON.stringify(postData)
-    }
-
-    const URL = `http://localhost:8000/news/${newsId}/comment`;
-    fetch(URL, requestOptions)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-        .then(data => {
-            console.log('POST request successful:', data);
-        })
-        .catch(error => {
-            console.error('There was a problem with the POST request:', error);
-        });
-
-}
-
-function displayNewsDetail(data, comments) {
+function displayOrderDetail(data, comments) {
     const newsDetailContainer = document.getElementById("News-Detail__container");
     newsDetailContainer.innerHTML = `
         <img src="../images/news1.png" alt="" class="w-full">

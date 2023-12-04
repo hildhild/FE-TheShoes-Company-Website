@@ -59,7 +59,7 @@ function handleLogin() {
         sessionStorage.setItem("role", data.data.role);
 
         handleHeader();
-        window.location.href = "/index.html";
+        window.location.href = "../index.html";
       })
       .catch((error) => {
         console.error("Error:", error);
