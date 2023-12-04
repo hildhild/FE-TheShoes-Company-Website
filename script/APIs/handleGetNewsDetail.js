@@ -23,7 +23,7 @@ function addNewsComment(postData) {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${localStorage.getItem("token")}`
+            'Authorization': `Bearer ${sessionStorage.getItem("token")}`
         },
         body: JSON.stringify(postData)
     }

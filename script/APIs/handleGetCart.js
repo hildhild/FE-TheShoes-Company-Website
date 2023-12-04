@@ -6,12 +6,35 @@ function convertTime(utcTimestamp) {
     const dateGmtPlus7 = new Date(gmtPlus7Milliseconds);
     return dateGmtPlus7.toISOString();
 }
+function deteleItem(deleteData) {
+    const URL = "http://localhost:8000/order/cart";
+    fetch(URL, {
+        method: 'DELETE',
+        headers: {
+            'Authorization': `Bearer ${sessionStorage.getItem("token")}`,
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(deleteData)
+    })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+           
+        })
+        .catch(error => {
+            console.error('There was a problem with the fetch operation:', error);
+        });
+}
 function getCart() {
     const URL = "http://localhost:8000/order/cart";
     fetch(URL, {
         method: 'GET',
         headers: {
-            'Authorization': `Bearer ${localStorage.getItem("token")}`,
+            'Authorization': `Bearer ${sessionStorage.getItem("token")}`,
             'Content-Type': 'application/json'
         }
     })
@@ -22,8 +45,8 @@ function getCart() {
             return response.json();
         })
         .then(data => {
-            //console.log(data.data);
-            displayCart(data.data)
+            displayCart(data.data);
+            console.log(data.data);
         })
         .catch(error => {
             console.error('There was a problem with the fetch operation:', error);
@@ -58,9 +81,10 @@ function displayCart(data) {
                     </div>
                     <div class="h-[80px]"></div>
                     <button
-                        class="float-right py-3 px-6 text-xs font-bold transition-all hover:opacity-[0.85] focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                        data-orderId=${data[i].order_detail_id}
+                        class="delete-btn relative z-20 float-right py-3 px-6 text-xs font-bold transition-all hover:opacity-[0.85] focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                         data-ripple-light="true">
-                        <i class="fa-regular fa-trash-can text-2xl" style="color: #000000;"></i>
+                        <i class="fa-regular fa-trash-can relative z-0 text-2xl " style="color: #000000;"></i>
                     </button>
                 </div>
             </div>
@@ -82,7 +106,7 @@ function displayCart(data) {
                 <p class="pb-[10px]">Shipping</p>
             </div>
             <div class="w-1/2 text-right">
-                <p class="pb-[10px]">${convertTime(data[data.length - 2]?.created_at).slice(0,10) + " " + convertTime(data[data.length - 2]?.created_at).slice(11,19) || "Not available"}</p>
+                <p class="pb-[10px]">${data.length <= 1 ? "Not available" : convertTime(data[data.length - 2]?.created_at).slice(0, 10) + " " + convertTime(data[data.length - 2].created_at)?.slice(11, 19)}</p>
                 <p class="pb-[10px]">$${data[data.length - 1].superTotalMoney}</p>
                 <p class="pb-[10px]">0</p>
                 <p class="pb-[10px]">0</p>
@@ -113,6 +137,13 @@ function displayCart(data) {
 </div>
     `
     html += `</div>`;
-
     document.getElementById("cart-container").innerHTML = html;
+
+    var deleteBtns = document.getElementsByClassName("delete-btn");
+    for (let i = 0; i < deleteBtns.length; i++) {
+        deleteBtns[i].addEventListener('click', (e) => {
+            deteleItem({order_detail_id: Number(deleteBtns[i].dataset.orderid)});
+            location.reload();
+        })
+    }
 }
