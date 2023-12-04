@@ -16,7 +16,7 @@ function getLatestNews() {
         });
 }
 
-getLastestNews();
+getLatestNews();
 function displayLatestNews(data) {
     const latestNewsContainer = document.getElementById('latest-news-container');
     let html = "";
