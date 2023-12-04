@@ -61,7 +61,7 @@ function handleLogin() {
         window.location.href = "/index.html";
       })
       .catch((error) => {
-        console.error("Error:", error); 
+        console.error("Error:", error);
         alert("Login failed.");
       });
   } else {
