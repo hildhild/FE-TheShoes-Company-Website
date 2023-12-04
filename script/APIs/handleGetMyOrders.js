@@ -1,8 +1,13 @@
 function getMyOrders() {
-    const user_id = sessionStorage.getItem('user_id');
-    const getOrdersURL = `http://localhost:8000/user/buying-history?user_id=${user_id}`; //wait api
+    const getOrdersURL = `http://localhost:8000/user/buying-history`; //wait api
 
-    fetch(getOrdersURL)
+    fetch(getOrdersURL, {
+        method: 'GET',
+        headers: {
+            'Authorization': `Bearer ${sessionStorage.getItem("token")}`,
+            'Content-Type': 'application/json'
+        }
+    })
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
@@ -10,8 +15,8 @@ function getMyOrders() {
             return response.json();
         })
         .then(data => {
-            console.log(data.order);
-            displayMyOrders(data.order);
+            console.log(data?.data?.order);
+            displayMyOrders(data?.data?.order);
         })
         .catch(error => {
             console.error('There was a problem with the fetch operation:', error);
@@ -19,7 +24,7 @@ function getMyOrders() {
 }
 
 getMyOrders();
-function displayMyOrders(data) {
+function displayMyOrders(orders) {
     const myOrdersContainer = document.getElementById('my-orders-container');
     const totalOrders = document.getElementById("total-orders");
     const shippingOrders = document.getElementById("shipping-orders");
@@ -29,14 +34,13 @@ function displayMyOrders(data) {
     var countShippingOrders = 0;
     var countRejectedOrders = 0;
     var countOrderedOrders = 0;
-
     let html = "";
-    data.forEach((value, index) => {
+    orders.forEach((value) => {
         countTotalOrders ++;
-        if (value.status == 'shipping') {
+        if (value.order_status == 'shipping') {
             countShippingOrders ++;
         }
-        else if (value.status == 'rejected') {
+        else if (value.order_status == 'rejected') {
             countRejectedOrders ++;
         }
         else {
@@ -45,8 +49,8 @@ function displayMyOrders(data) {
         html += `
             <div class="flex flex-row text-base text-black bg-white p-[20px] border border-[#d1d1d1] rounded-lg mt-2.5 items-center">
                 <div class="min-w-[20%]">${value.order_id}</div>
-                <div class="min-w-[20%]">${value.items.created_at}</div>
-                <div class="min-w-[20%]">$${value.items.total_money}</div>
+                <div class="min-w-[20%]">${value.items[0].created_at}</div>
+                <div class="min-w-[20%]">$${value.items[0].total_money}</div>
                 <div class="min-w-[20%]">${value.order_status}</div>
                 <div class="min-w-[20%] flex flex-row justify-start items-center text-xl gap-4">
                     <a href="./OrderDetail.html?id=${value.order_id}" class="block">
@@ -60,6 +64,6 @@ function displayMyOrders(data) {
     shippingOrders.innerText = countShippingOrders;
     rejectedOrders.innerText = countRejectedOrders;
     orderedOrders.innerText = countOrderedOrders;
-    myOrdersContainer.innerHTML = html;
+    if (html != "") myOrdersContainer.innerHTML = html;
 
 }

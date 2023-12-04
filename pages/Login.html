@@ -26,13 +26,15 @@
         class="sign flex flex-row h-[30px] fixed top-0 left-0 right-0 z-50 items-center md:px-[20px] px-[10px] justify-between bg-[#f2f2f2] text-sm"
       >
         <p class="block">Free shipping on orders above $200 (US only)</p>
-        <p class="hidden md:ml-auto md:mr-[56px] mr-[10px]" id="userName">
-          <a href="./pages/Account.html">User1234</a>
+        <p class="md:ml-auto md:mr-[56px] mr-[10px]">
+          <a href="./pages/Account.html" id="userName">User1234</a>
         </p>
-        <p class="cursor-pointer" id="loginbutton">
-          <a href="#" id="loginbutton_child">Log out</a>
+        <p class="cursor-pointer" id="logoutbutton1">
+          <a href="#" id="logoutbutton1.1">Log out</a>
         </p>
-        <p class="cursor-pointer" id="logoutbutton"><a href="#">Log in</a></p>
+        <p class="cursor-pointer" id="loginbutton1">
+          <a   id="loginbutton1.1" href="./Login.html">Log in</a>
+        </p>
       </div>
       <div
         class="header flex justify-between lg:px-[60px] px-[34px] bg-[#f2f2f2] fixed top-[30px] left-0 right-0 z-50"
@@ -138,7 +140,7 @@
         <div class="flex flex-col">
           <h2 class="lg:text-2xl font-semibold mb-[12px]">Sign in</h2>
           <div class="w-full md:w-[300px]">
-            <form action="">
+            <form action="" onsubmit="handleLogin()">
               <div>
                 <label
                   for="email"
@@ -318,4 +320,4 @@
     <script src="../script/header.js"></script>
     <script src="../script/login.js"></script>
   </body>
-</html>
+ </html>

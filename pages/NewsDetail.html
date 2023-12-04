@@ -18,9 +18,15 @@
     <div id="main">
         <div class="sign flex flex-row h-[30px] fixed top-0 left-0 right-0 z-10 items-center md:px-[20px] px-[10px] justify-between bg-[#f2f2f2] text-sm">
             <p class="block">Free shipping on orders above $200 (US only)</p>
-            <p class="hidden md:ml-auto md:mr-[56px] mr-[10px]"><a href="./pages/Account.html">User1234</a></p>
-            <p class="cursor-pointer hidden"><a href="#">Log out</a></p>
-            <p class="cursor-pointer"><a href="./pages/Login.html">Log in</a></p>
+            <p class="md:ml-auto md:mr-[56px] mr-[10px]">
+          <a href="./pages/Account.html" id="userName">User1234</a>
+        </p>
+        <p class="cursor-pointer" id="logoutbutton1">
+          <a href="#" id="logoutbutton1.1">Log out</a>
+        </p>
+        <p class="cursor-pointer" id="loginbutton1">
+          <a id="loginbutton1.1" href="./Login.html">Log in</a>
+        </p>
         </div>
         <div class="header flex justify-between lg:px-[60px] px-[34px] bg-[#f2f2f2] fixed top-[30px] left-0 right-0 z-50">
             <div class="header__logo order-2 lg:order-1">
@@ -111,6 +117,8 @@
     <script src="../script/header.js"></script>
     <script src="../script/APIs/handleGetNewsDetail.js"></script>
     <script src="../script/APIs/handleAddComment.js"></script>
+    <script src="../script/login.js"></script>
+
 </body>
 
 </html>

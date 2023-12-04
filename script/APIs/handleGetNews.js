@@ -28,7 +28,7 @@ function displayNews(data) {
         <div class="w-full lg:w-1/3 lg:mb-0 mb-[25px]">
             <a href="./NewsDetail.html?id=${value.news_id}" class="block">
                 <div class="mb-2">
-                    <img src="../../images/news1.png" alt="">
+                    <img src="../images/news1.png" alt="">
                 </div>
                 <p class="text-base font-semibold">${value.title}</p>
             </a>
