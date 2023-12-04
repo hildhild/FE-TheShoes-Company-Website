@@ -56,7 +56,7 @@ function displayMyOrders(orders) {
         html += `
             <div class="flex flex-row text-base text-black bg-white p-[20px] border border-[#d1d1d1] rounded-lg mt-2.5 items-center">
                 <div class="min-w-[10%]">${value.order_id}</div>
-                <div class="min-w-[30%]">${value.items[0]?.created_at || "Not available"}</div>
+                <div class="min-w-[30%]">${value.created_at}</div>
                 <div class="min-w-[20%]">$${value.total_money}</div>
                 <div class="min-w-[20%]">${value.order_status}</div>
                 <div class="min-w-[20%] flex flex-row justify-start items-center text-xl gap-4">
