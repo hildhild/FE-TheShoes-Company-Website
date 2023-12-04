@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../css/header.css" />
+    <script
+      src="https://kit.fontawesome.com/f776702b05.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div
+      class="news-detail-container my-[50px] lg:mx-[100px] md:mx-[50px] mx-[25px]"
+    >
+      <strong class="md:text-[25px] text-[20px]">Edit news</strong><br /><br />
+      <form class="w-full">
+        <div class="flex flex-wrap -mx-3 mb-6">
+          <div class="w-full px-3 mb-[20px]">
+            <label
+              class="block tracking-wide text-gray-700 text-xs mb-2"
+              for="grid-title"
+            >
+              Title
+            </label>
+            <input
+              class="appearance-none block w-full bg-white-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+              id="grid-title"
+              type="text"
+              value="old title"
+            />
+          </div>
+          <div class="w-full px-3 mb-[20px]">
+            <label
+              class="block tracking-wide text-gray-700 text-xs mb-2"
+              for="grid-content"
+            >
+              Content
+            </label>
+            <textarea
+              class="appearance-none block w-full bg-white-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+              rows="15"
+              id="grid-content"
+              type="text"
+            >
+old content</textarea
+            >
+          </div>
+          <div class="w-full px-3">
+            <label
+              class="block tracking-wide text-gray-700 text-xs mb-2"
+              for="grid-img-link"
+            >
+              Image link
+            </label>
+            <input
+              class="appearance-none block w-full bg-white-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+              id="grid-img-link"
+              type="text"
+              value="old img link"
+            />
+          </div>
+        </div>
+        <button
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        >
+          Save
+        </button>
+        <button
+          class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
+        >
+          Cancel
+        </button>
+      </form>
+    </div>
+    <script src="../script/login.js"></script>
+  </body>
+</html>
