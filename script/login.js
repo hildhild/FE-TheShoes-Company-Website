@@ -1,61 +1,70 @@
 function handleHeader() {
-  var token = localStorage.getItem("token");
+  var token = sessionStorage.getItem("token");
+  var user_name = sessionStorage.getItem("user_name");
 
-  var loginButton = document.getElementById("loginbutton");
-  var logoutButton = document.getElementById("logoutbutton");
-  var logoutButton_child = document.getElementById("loginbutton_child");
+  var loginButton = document.getElementById("loginbutton1.1");
+  var logoutButton = document.getElementById("logoutbutton1.1");
   var userNameField = document.getElementById("userName");
+  userNameField.textContent = user_name;
 
   if (token) {
-    loginButton.style.display = "block";
-    logoutButton.style.display = "none";
+    loginButton.classList.add("hidden");
+    logoutButton.classList.add("inline-block");
+    userNameField.classList.add("inline-block");
   } else {
-    loginButton.style.display = "none";
-    logoutButton.style.display = "block";
+    loginButton.classList.add("inline-block");
+    logoutButton.classList.add("hidden");
+    userNameField.classList.add("hidden");
   }
 
-  logoutButton_child.addEventListener("click", function () {
-    console.log("Logout button clicked");
-    localStorage.removeItem("token");
+  logoutButton.addEventListener("click", function () {
+    sessionStorage.removeItem("token");
+    sessionStorage.removeItem("user_id");
+    sessionStorage.removeItem("user_name");
+    sessionStorage.removeItem("email");
+    sessionStorage.removeItem("role");
     location.reload();
+    console.log("Clickl logout");
   });
 }
+handleHeader();
 
-document.addEventListener("DOMContentLoaded", function () {
-  handleHeader();
+function handleLogin() {
+  event.preventDefault();
 
-  var buttonSubmit = document.getElementById("btnSubmit");
+  var emailValue = document.getElementById("email").value;
+  var passwordValue = document.getElementById("password").value;
 
-  buttonSubmit.addEventListener("click", function (event) {
-    event.preventDefault();
+  if (emailValue && passwordValue) {
+    var data = {
+      email: emailValue,
+      password: passwordValue,
+    };
 
-    var emailValue = document.getElementById("email").value;
-    var passwordValue = document.getElementById("password").value;
+    console.log(data);
+    fetch("http://localhost:8000/auth/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        sessionStorage.setItem("token", data.token);
+        sessionStorage.setItem("user_id", data.data.user_id);
+        sessionStorage.setItem("user_name", data.data.user_name);
+        sessionStorage.setItem("email", data.data.email);
+        sessionStorage.setItem("role", data.data.role);
 
-    if (emailValue && passwordValue) {
-      var credentials = {
-        email: emailValue,
-        password: passwordValue,
-      };
-
-      fetch("http://172.16.1.122:8000/auth/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(credentials),
+        handleHeader();
+        window.location.href = "/index.html";
       })
-        .then((response) => response.json())
-        .then((data) => {
-          console.log("Server response:", data);
-          window.localStorage.setItem("token", data.token);
-          handleHeader();
-        })
-        .catch((error) => {
-          console.error("Error:", error);
-        });
-    } else {
-      alert("Please enter both email and password.");
-    }
-  });
-});
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+  } else {
+    alert("Please enter both email and password.");
+  }
+}
