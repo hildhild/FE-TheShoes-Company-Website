@@ -108,23 +108,136 @@
             </div>
           </div>
         </div>
-        <div
-          class="header__lg-search hidden lg:block text-2xl px-4 py-[10px] cursor-pointer order-3 relative min-w-[25%]"
-        >
-          <i
-            class="fa-solid fa-magnifying-glass absolute bottom-1/2 translate-y-1/2 right-[10%]"
-          ></i>
-          <div class="header__lg-search">
-            <form action="">
-              <input
-                type="text"
-                id="search-info"
-                class="bg-gray-50 border border-gray-300 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-2.5 pl-2.5 pr-12"
-                placeholder="Search..."
-                required
-              />
-            </form>
-          </div>
+        <div class="lg:px-[100px] px-[20px] py-[50px] mt-[95px]">
+            <div class="flex flex-row flex-start items-center gap-[10px]">
+                <i class="fa-solid fa-chevron-left cursor-pointer block"></i>
+                <p class="text-base underline underline-offset-4"><a href="./Product.html">Back to product</a></p>
+            </div>
+            <div class="flex flex-col">
+                <div class="product__img bg-white w-full flex justify-center self-center">
+                    <img src="../images/puma.png" alt="" class="block w-1/2">
+                </div>
+                <div class="product__img bg-white w-full flex justify-center self-center my-hidden">
+                    <img src="../images/puma.png" alt="" class="block w-1/2">
+                </div>
+                <div class="product__img bg-white w-full flex justify-center self-center my-hidden">
+                    <img src="../images/puma.png" alt="" class="block w-1/2">
+                </div>
+                <div class="product__img bg-white w-full flex justify-center self-center my-hidden">
+                    <img src="../images/puma.png" alt="" class="block w-1/2">
+                </div>
+                <div class="w-full items-center justify-center text-center py-2 product__slider-change mt-[22px]">
+                    <div class="inline-block mr-[70px]"><i class="fa-solid fa-chevron-left product__slider-prev cursor-pointer"></i>
+                    </div>
+                    <div class="inline-block w-[15px] h-[15px] border border-black px-[5px] mx-[5px] product__slider-btn cursor-pointer active">
+                    </div>
+                    <div class="inline-block w-[15px] h-[15px] border border-black px-[5px] mx-[5px] product__slider-btn cursor-pointer">
+                    </div>
+                    <div class="inline-block w-[15px] h-[15px] border border-black px-[5px] mx-[5px] product__slider-btn cursor-pointer">
+                    </div>
+                    <div class="inline-block w-[15px] h-[15px] border border-black px-[5px] mx-[5px] product__slider-btn cursor-pointer">
+                    </div>
+                    <div class="inline-block ml-[70px]"><i class="fa-solid fa-chevron-right product__slider-next cursor-pointer"></i></div>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between self-center mt-[20px]">
+                <div class="flex flex-col gap-[10px]" id="product-detail-container">
+                
+                </div>
+                <div class="mt-[32px] md:mt-0">
+                    <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-base px-5 py-2.5 mt-2.5 focus:outline-none md:min-w-[180px]">Add
+                        to cart
+                        <i class="fa-solid fa-arrow-right inline-block ml-[30px]"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row md:px-[84px] py-[12px] items-start md:items-center justify-between lg:mt-[90px] md:mt-[44px] mt-[24px] gap-[20px] text-base font-semibold border-t border-b border-black">
+                <div><a href="#product-desc">Product Description</a></div>
+                <div><a href="#also-like">You May Also Like</a></div>
+                <div><a href="#also-bought">Customer Also Bought</a></div>
+                <div><a href="#reviews">Reviews</a></div>
+            </div>
+            <div id="product-desc" class="pb-[20px] border-b border-black">
+            </div>
+            <div id="also-like" class="flex flex-col lg:pb-[60px] pb-[40px] border-b border-black">
+                <h2 class="text-2xl font-semibold mt-[20px]">You May Also Like</h2>
+                <div class="flex flex-col">
+                    <div class="product__img bg-white w-full flex flex-col items-center">
+                        <img src="../images/puma.png" alt="" class="block w-1/2">
+                        <p class="text-base font-semibold">Puma Men's Caven Sneaker 1</p>
+                        <p class="text-base font-semibold">$79.99</p>
+                    </div>
+                    <div class="product__img bg-white w-full flex flex-col items-center">
+                        <img src="../images/puma.png" alt="" class="block w-1/2">
+                        <p class="text-base font-semibold">Puma Men's Caven Sneaker 2</p>
+                        <p class="text-base font-semibold">$89.99</p>
+                    </div>
+                    <div class="product__img bg-white w-full flex flex-col items-center">
+                        <img src="../images/puma.png" alt="" class="block w-1/2">
+                        <p class="text-base font-semibold">Puma Men's Caven Sneaker 3</p>
+                        <p class="text-base font-semibold">$99.99</p>
+                    </div>
+                    <div class="product__img bg-white w-full flex flex-col items-center">
+                        <img src="../images/puma.png" alt="" class="block w-1/2">
+                        <p class="text-base font-semibold">Puma Men's Caven Sneaker 4</p>
+                        <p class="text-base font-semibold">$109.99</p>
+                    </div>
+                    <div class="w-full items-center justify-center text-center py-2 product__slider-change mt-[22px]">
+                        <div class="inline-block mr-[70px]"><i class="fa-solid fa-chevron-left product__slider-prev cursor-pointer"></i>
+                        </div>
+                        <div class="inline-block w-[15px] h-[15px] border border-black px-[5px] mx-[5px] product__slider-btn cursor-pointer active">
+                        </div>
+                        <div class="inline-block w-[15px] h-[15px] border border-black px-[5px] mx-[5px] product__slider-btn cursor-pointer">
+                        </div>
+                        <div class="inline-block w-[15px] h-[15px] border border-black px-[5px] mx-[5px] product__slider-btn cursor-pointer">
+                        </div>
+                        <div class="inline-block w-[15px] h-[15px] border border-black px-[5px] mx-[5px] product__slider-btn cursor-pointer">
+                        </div>
+                        <div class="inline-block ml-[70px]"><i class="fa-solid fa-chevron-right product__slider-next cursor-pointer"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div id="also-bought" class="flex flex-col lg:pb-[60px] pb-[40px] border-b border-black">
+                <h2 class="text-2xl font-semibold mt-[20px]">Customer Also Bought</h2>
+                <div class="flex flex-col">
+                    <div class="product__img bg-white w-full flex flex-col items-center">
+                        <img src="../images/puma.png" alt="" class="block w-1/2">
+                        <p class="text-base font-semibold">Puma Men's Caven Sneaker 1</p>
+                        <p class="text-base font-semibold">$79.99</p>
+                    </div>
+                    <div class="product__img bg-white w-full flex flex-col items-center">
+                        <img src="../images/puma.png" alt="" class="block w-1/2">
+                        <p class="text-base font-semibold">Puma Men's Caven Sneaker 2</p>
+                        <p class="text-base font-semibold">$89.99</p>
+                    </div>
+                    <div class="product__img bg-white w-full flex flex-col items-center">
+                        <img src="../images/puma.png" alt="" class="block w-1/2">
+                        <p class="text-base font-semibold">Puma Men's Caven Sneaker 3</p>
+                        <p class="text-base font-semibold">$99.99</p>
+                    </div>
+                    <div class="product__img bg-white w-full flex flex-col items-center">
+                        <img src="../images/puma.png" alt="" class="block w-1/2">
+                        <p class="text-base font-semibold">Puma Men's Caven Sneaker 4</p>
+                        <p class="text-base font-semibold">$109.99</p>
+                    </div>
+                    <div class="w-full items-center justify-center text-center py-2 product__slider-change mt-[22px]">
+                        <div class="inline-block mr-[70px]"><i class="fa-solid fa-chevron-left product__slider-prev cursor-pointer"></i>
+                        </div>
+                        <div class="inline-block w-[15px] h-[15px] border border-black px-[5px] mx-[5px] product__slider-btn cursor-pointer active">
+                        </div>
+                        <div class="inline-block w-[15px] h-[15px] border border-black px-[5px] mx-[5px] product__slider-btn cursor-pointer">
+                        </div>
+                        <div class="inline-block w-[15px] h-[15px] border border-black px-[5px] mx-[5px] product__slider-btn cursor-pointer">
+                        </div>
+                        <div class="inline-block w-[15px] h-[15px] border border-black px-[5px] mx-[5px] product__slider-btn cursor-pointer">
+                        </div>
+                        <div class="inline-block ml-[70px]"><i class="fa-solid fa-chevron-right product__slider-next cursor-pointer"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div id="reviews" class="pb-[20px]">
+                
+            </div>
         </div>
         <div class="header__icon flex items-center order-4">
           <div class="header__cart text-2xl px-4 py-[16.5px] cursor-pointer">
@@ -588,6 +701,7 @@
     </div>
     <script src="../script/header.js"></script>
     <script src="../script/ProductDetail.js"></script>
-    <script src="../script/login.js"></script>
-  </body>
+    <script src="../script/APIs/handleGetDetailProduct.js"></script>
+</body>
+
 </html>
