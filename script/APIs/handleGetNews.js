@@ -22,13 +22,13 @@ function displayNews(data) {
     let html = "";
     data.forEach((value, index) => {
         if (index % 3 === 0) {
-            html += `<div class="flex flex-col lg:flex-row lg:gap-[122.5px] mb-[25px]">`;
+            html += `<div class="flex flex-col lg:flex-row mb-[32px] lg:mx-[-16px]">`;
         }
         html += `
-        <div class="w-full lg:w-1/3 lg:mb-0 mb-[25px]">
-            <a href="./NewsDetail.html?id=${value.news_id}" class="block">
-                <div class="mb-2">
-                    <img src="../images/news1.png" alt="">
+        <div class="w-full lg:w-1/3 lg:mb-0 mb-[32px] lg:px-4">
+            <a href="./NewsDetail.html?id=${value.news_id}" class="block w-full">
+                <div class="mb-2 block w-full">
+                    <img src="../images/news1.png" alt="" class="block w-full">
                 </div>
                 <p class="text-base font-semibold">${value.title}</p>
             </a>

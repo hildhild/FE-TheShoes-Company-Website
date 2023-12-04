@@ -150,6 +150,7 @@ function displayCart(data) {
     var checkoutBtn = document.getElementById("checkout-btn");
     checkoutBtn.addEventListener('click', () => {
         const postValue = {};
+        if (data.length === 0) return;
         postValue.email = sessionStorage.getItem("email");
         postValue.user_name = sessionStorage.getItem("user_name");
         handleCheckout({...postValue, "country": "VN",
