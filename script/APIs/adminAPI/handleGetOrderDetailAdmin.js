@@ -2,7 +2,7 @@ var orderID = window.location.search.slice(4);
 console.log(orderID);
 
 function getOrderDetail() {
-    const getOrdersURL = `http://localhost:8000/user/buying-history`; 
+    const getOrdersURL = `http://localhost:8000/order/order-list`; 
 
     fetch(getOrdersURL, {
         method: 'GET',
@@ -18,8 +18,8 @@ function getOrderDetail() {
             return response.json();
         })
         .then(data => {
-            console.log(data?.data?.order);
-            displayOrderDetail(data?.data?.order);
+            console.log(data?.data);
+            displayOrderDetail(data?.data);
         })
         .catch(error => {
             console.error('There was a problem with the fetch operation:', error);
@@ -35,39 +35,51 @@ function displayOrderDetail(orders) {
             break;
         }
     }
-    var subtotal = 0;
+    var html_select_status = "";
+        if (myOrderDetail.order_status == 'shipping'){
+            html_select_status = `
+                <select
+                class="inline-block bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-1/4 p-2.5"
+                onchange="changeStatus(${myOrderDetail.order_id})"
+                id="order-status-${myOrderDetail.order_id}"
+                >
+                    <option value="ordered">Ordered</option>
+                    <option value="shipping" selected>Shipping</option>
+                    <option value="rejected">Rejected</option>
+                </select>
+            `;
+        }
+        else if (myOrderDetail.order_status == 'rejected'){
+            html_select_status = `
+                <select
+                class="inline-block bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-1/4 p-2.5"
+                onchange="changeStatus(${myOrderDetail.order_id})"
+                id="order-status-${myOrderDetail.order_id}"
 
-    var html = "";
-    myOrderDetail.items.forEach((value) => {
-        subtotal += value.total_money*value.quantity;
-        html += `
-            <div class="cart-item">
-                <div class="flex mb-[30px]">
-                    <div class="w-1/5">
-                    <img src="${value.thumbnail}" alt="" />
-                    </div>
-                    <div class="w-3/5 pl-[20px]">
-                    <p class="font-semibold text-lg mb-[10px]">
-                        ${value.product_name}
-                    </p>
-                    <ul class="list-disc ml-[20px]">
-                        <li>Colour: ${value.color}</li>
-                        <li>Size: ${value.size}</li>
-                        <li>Quantity: ${value.quantity}</li>
-                    </ul>
-                    </div>
-                    <div class="w-1/5">
-                    <div class="price text-right">
-                        <p class="font-semibold">$${value.total_money}</p>
-                    </div>
-                    </div>
-                </div>
-            </div>
-        `;
-    })
-    if (subtotal > 200) var shipping = 0;
+                >
+                    <option value="ordered">Ordered</option>
+                    <option value="shipping" >Shipping</option>
+                    <option value="rejected" selected>Rejected</option>
+                </select>
+            `;
+        }
+        else{
+            html_select_status = `
+                <select
+                class="inline-block bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-1/4 p-2.5"
+                onchange="changeStatus(${myOrderDetail.order_id})"
+                id="order-status-${myOrderDetail.order_id}"
+                >
+                    <option value="ordered" selected>Ordered</option>
+                    <option value="shipping" >Shipping</option>
+                    <option value="rejected">Rejected</option>
+                </select>
+            `;
+        }
+    var subtotal = myOrderDetail.total_money+0;
+    if (myOrderDetail.total_money > 200) var shipping = 0;
     else var shipping = 30;
-    var total = subtotal + shipping;
+    myOrderDetail.total_money += shipping;
     orderDetailContainer.innerHTML = `
         <strong class="text-2xl">Order ID: ${myOrderDetail.order_id}</strong><br /><br />
         <div class="flex">
@@ -95,16 +107,12 @@ function displayOrderDetail(orders) {
             <p class="pb-[10px]">${myOrderDetail.address}</p>
             <p class="pb-[10px]">${myOrderDetail.phone_number}</p>
             <p class="pb-[10px]">${myOrderDetail.created_at}</p>
-            <p class="pb-[10px]">${myOrderDetail.order_status}</p>
+            <p class="pb-[10px]">
+                ${html_select_status}
+            </p>
         </div>
         </div>
         <br />
-        <hr class="border-b border-solid border-black mb-[20px]" />
-        <div class="lg:flex">
-        <div class="w-full" id="list-items-of-order">
-            
-        </div>
-        </div>
         <hr class="border-b border-solid border-black mb-[20px]" />
         <div class="flex">
         <div class="w-1/2 text-left">
@@ -116,7 +124,7 @@ function displayOrderDetail(orders) {
         <div class="w-1/2 text-right">
             <p class="pb-[10px]">5-10 days from ordering date</p>
             <p class="pb-[10px]">$${subtotal}</p>
-            <p class="pb-[10px]">$0.00</p>
+            <p class="pb-[10px]">$0</p>
             <p class="pb-[10px]">$${shipping}</p>
         </div>
         </div>
@@ -126,7 +134,7 @@ function displayOrderDetail(orders) {
             <p class="font-semibold text-lg">Total</p>
         </div>
         <div class="w-1/2 text-right">
-            <p class="font-semibold text-lg">$${total}</p>
+            <p class="font-semibold text-lg">$${myOrderDetail.total_money}</p>
         </div>
         </div>
         <p>
@@ -134,9 +142,30 @@ function displayOrderDetail(orders) {
         once submitted.
         </p>
     `;
-    const listItemsOfOrder = document.getElementById("list-items-of-order");
-    listItemsOfOrder.innerHTML= html;
 }
+function changeStatus(order_id){
+    var newStatus = document.getElementById(`order-status-${order_id}`).value;
+    fetch('http://localhost:8000/order/order-status', {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${sessionStorage.getItem("token")}`
+        },
+        body: JSON.stringify({
+            order_id: order_id,
+            order_status: newStatus
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('change success:', data);
+        getOrderDetail();
+    })
+    .catch(error => {
+        console.error('Error when changing the status:', error);
+    });
 
+
+}
 
 getOrderDetail();

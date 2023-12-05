@@ -25,11 +25,15 @@
         class="sign flex flex-row h-[30px] fixed top-0 left-0 right-0 z-50 items-center md:px-[20px] px-[10px] justify-between bg-[#f2f2f2] text-sm"
       >
         <p class="block">Free shipping on orders above $200 (US only)</p>
-        <p class="hidden md:ml-auto md:mr-[56px] mr-[10px]">
-          <a href="./pages/Account.html">User1234</a>
+        <p class="md:ml-auto md:mr-[56px] mr-[10px]">
+          <a href="./AccountAdmin.html" id="userName">User1234</a>
         </p>
-        <p class="cursor-pointer hidden"><a href="#">Log out</a></p>
-        <p class="cursor-pointer"><a href="../pages/Login.html">Log in</a></p>
+        <p class="cursor-pointer" id="logoutbutton1">
+          <a href="#" id="logoutbutton1.1">Log out</a>
+        </p>
+        <p class="cursor-pointer" id="loginbutton1">
+          <a id="loginbutton1.1" href="../Login.html">Log in</a>
+        </p>
       </div>
       <div
         class="header flex justify-between lg:px-[60px] px-[34px] bg-[#f2f2f2] fixed top-[30px] left-0 right-0 z-50"
@@ -53,7 +57,7 @@
                 <input
                   type="text"
                   id="search-info"
-                  class="bg-gray-50 border border-gray-300 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-2.5 pl-2.5 pr-12"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-2.5 pl-2.5 pr-12"
                   placeholder="Search..."
                   required
                 />
@@ -69,28 +73,42 @@
 
             <div class="header__navbar-item w-full">
               <a
-                href="../../index.html"
+                href="/pages/admin/"
                 class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl"
                 >Home</a
               >
             </div>
             <div class="header__navbar-item w-full">
               <a
-                href="#"
+                href="./ProductAdmin.html"
                 class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl"
                 >Products</a
               >
             </div>
             <div class="header__navbar-item w-full">
               <a
-                href="../News.html"
+                href="./NewsAdmin.html"
                 class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl"
                 >News</a
               >
             </div>
             <div class="header__navbar-item w-full">
               <a
-                href="../About.html"
+                href="./UserManagement.html"
+                class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl"
+                >UserList</a
+              >
+            </div>
+            <div class="header__navbar-item w-full">
+              <a
+                href="./OrderManagement.html"
+                class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl"
+                >Orders</a
+              >
+            </div>
+            <div class="header__navbar-item w-full">
+              <a
+                href="./AboutAdmin.html"
                 class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl"
                 >About</a
               >
@@ -108,7 +126,7 @@
               <input
                 type="text"
                 id="search-info"
-                class="bg-gray-50 border border-gray-300 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-2.5 pl-2.5 pr-12"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-2.5 pl-2.5 pr-12"
                 placeholder="Search..."
                 required
               />
@@ -117,15 +135,16 @@
         </div>
         <div class="header__icon flex items-center order-4">
           <div class="header__cart text-2xl px-4 py-[16.5px] cursor-pointer">
-            <i class="fa-solid fa-cart-shopping"></i>
+            <!-- <a href="./pages/admin/Cart.html">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </a> -->
           </div>
           <div class="header__user text-2xl px-4 py-[16.5px] cursor-pointer">
-            <a href="./Account.html" id="userName">
-              <i class="fa-solid fa-user"></i>
-            </a>
+            <i class="fa-solid fa-user"></i>
           </div>
         </div>
       </div>
+      <!-- END HEAR -->
       <div class="lg:px-[100px] px-[20px] py-[50px] mt-[95px]">
         <div class="flex flex-row items-center justify-start gap-[10px]">
           <button
@@ -501,6 +520,7 @@
     </div>
     <script src="../../script/header.js"></script>
     <script src="../../script/ProductDetail.js"></script>
-    <script src="../script/login.js"></script>
+    <script src="../../script/login.js"></script>
+    <script src="../../script/permission.js"></script>
   </body>
 </html>
