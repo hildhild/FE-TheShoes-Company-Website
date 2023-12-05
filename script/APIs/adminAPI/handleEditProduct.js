@@ -5,6 +5,7 @@ document.getElementById("product-stock").value = localStorage.getItem("quantity"
 document.getElementById("product-size").value = JSON.parse(localStorage.getItem("size"));
 document.getElementById("description").value = localStorage.getItem("description");
 
+
 localStorage.removeItem("proname");
 localStorage.removeItem("price");
 localStorage.removeItem("color");
