@@ -1,5 +1,14 @@
 var newsId = window.location.search.slice(4);
-
+function convertTime(utcTimestamp) {
+    const dateUtc = new Date(utcTimestamp);
+    
+    const utcMilliseconds = dateUtc.getTime();
+    const gmtPlus7Offset = 7 * 60 * 60 * 1000;
+    const gmtPlus7Milliseconds = utcMilliseconds + gmtPlus7Offset;
+    const dateGmtPlus7 = new Date(gmtPlus7Milliseconds);
+    console.log(dateGmtPlus7.toLocaleString())
+    return dateGmtPlus7.toLocaleString();
+}
 function getNewsDetail() {
     const getNewsURL = "http://localhost:8000/news/";
     fetch(getNewsURL + newsId)
@@ -73,7 +82,7 @@ function displayNewsDetail(data, comments) {
         <div class="comment-item py-[20px]">
             <div class="comment-info flex">
                 <p class="comment-own text-base font-semibold mt-[5px] mr-[10px]">${value.user_name}</p>
-                <p class="comment-date text-base font-semibold mt-[5px]">- ${value.created_at}</p>
+                <p class="comment-date text-base font-semibold mt-[5px]">- ${convertTime(value.created_at)}</p>
             </div>
             <p class="text-sm text-justify mt-[5px]">
                 ${value.content}
@@ -85,10 +94,10 @@ function displayNewsDetail(data, comments) {
     document.getElementById("submit-add-cmt").addEventListener('click', () => {
         const commentContent = document.getElementById("comment-content").value;
         const params = {
-            user_id: 1,
+            user_id: sessionStorage.getItem("user_id"),
             content: commentContent,
             title: commentContent,
-            user_name: "",
+            user_name: sessionStorage.getItem("user_name"),
             avatar_url: ""
         }
         addNewsComment(params);

@@ -23,7 +23,7 @@ function deteleItem(deleteData) {
             return response.json();
         })
         .then(data => {
-           
+
         })
         .catch(error => {
             console.error('There was a problem with the fetch operation:', error);
@@ -122,7 +122,7 @@ function displayCart(data) {
             </div>
         </div>
         <div class="mb-[20px] ml-[40%]">
-            <button
+            <button id="checkout-btn"
                 class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full ">
                 Continue to checkout
                 <i class="fa-solid fa-arrow-right float-right pt-[5px]" style="color: #ffffff;"></i>
@@ -142,8 +142,51 @@ function displayCart(data) {
     var deleteBtns = document.getElementsByClassName("delete-btn");
     for (let i = 0; i < deleteBtns.length; i++) {
         deleteBtns[i].addEventListener('click', (e) => {
-            deteleItem({order_detail_id: Number(deleteBtns[i].dataset.orderid)});
+            deteleItem({ order_detail_id: Number(deleteBtns[i].dataset.orderid) });
             location.reload();
         })
     }
+
+    var checkoutBtn = document.getElementById("checkout-btn");
+    checkoutBtn.addEventListener('click', () => {
+        const postValue = {};
+        if (data.length === 0) return;
+        postValue.email = sessionStorage.getItem("email");
+        postValue.user_name = sessionStorage.getItem("user_name");
+        handleCheckout({...postValue, "country": "VN",
+        "province": "VT",
+        "city":"ba ria",
+        "zip_code":"saxb",
+        "address":"123 phuoc nguyen",
+        "phone_number":"156546",
+        "card_name":"ABC",
+        "card_number":"12313",
+        "card_expiration":"2022-11-12",
+        "vcc":"123123"});
+        location.reload();
+    })
+}
+
+function handleCheckout(postData) {
+    const URL = "http://localhost:8000/order/checkout";
+    fetch(URL, {
+        method: 'POST',
+        headers: {
+            'Authorization': `Bearer ${sessionStorage.getItem("token")}`,
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(postData)
+    })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log('POST request successful:', data);
+        })
+        .catch(error => {
+            console.error('There was a problem with the fetch operation:', error);
+        });
 }
