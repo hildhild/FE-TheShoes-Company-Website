@@ -1,5 +1,5 @@
 function getMyOrders() {
-    const getOrdersURL = `http://localhost:8000/user/buying-history`; //wait api
+    const getOrdersURL = `http://localhost:8000/user/buying-history`; 
 
     fetch(getOrdersURL, {
         method: 'GET',
@@ -36,10 +36,12 @@ function displayMyOrders(orders) {
     var countOrderedOrders = 0;
     let html = "";
     orders.forEach((value) => {
-        var totalMoney = 0;
+        var subtotal = 0;
         value.items.forEach((value) => {
-            totalMoney += value.total_money;
+            subtotal += value.total_money*value.quantity;
         });
+        if (subtotal > 200) value.total_money  = subtotal;
+        else value.total_money = subtotal + 30;
         countTotalOrders ++;
         if (value.order_status == 'shipping') {
             countShippingOrders ++;
@@ -50,11 +52,12 @@ function displayMyOrders(orders) {
         else {
             countOrderedOrders ++;
         }
+        console.log(value.items[0])
         html += `
             <div class="flex flex-row text-base text-black bg-white p-[20px] border border-[#d1d1d1] rounded-lg mt-2.5 items-center">
                 <div class="min-w-[10%]">${value.order_id}</div>
-                <div class="min-w-[30%]">${value.items[0]?.created_at || "Not Available"}</div>
-                <div class="min-w-[20%]">$${totalMoney}</div>
+                <div class="min-w-[30%]">${value.created_at}</div>
+                <div class="min-w-[20%]">$${value.total_money}</div>
                 <div class="min-w-[20%]">${value.order_status}</div>
                 <div class="min-w-[20%] flex flex-row justify-start items-center text-xl gap-4">
                     <a href="./OrderDetail.html?id=${value.order_id}" class="block">
