@@ -97,7 +97,6 @@ function displayProductDetail(data) {
     descHtml += `<p class="text-base font-semibold mt-[20px]">${data.product_name}</p>`;
     descHtml += `<p class="text-sm text-justify mt-[20px]">${data.description}</p>`;
     desc.innerHTML = descHtml;
-
     document.getElementById("add-to-cart-btn").addEventListener('click', () => {
         const params = {
             "product_id": Number(proId),
@@ -111,6 +110,8 @@ function displayProductDetail(data) {
         addtoCart(params);
         location.reload();
     })
+
+    
 }
 
 function addNewsComment(postData) {

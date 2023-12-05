@@ -57,7 +57,7 @@ function addNewsComment(postData) {
 function displayNewsDetail(data, comments) {
     const newsDetailContainer = document.getElementById("News-Detail__container");
     newsDetailContainer.innerHTML = `
-        <img src="../images/news1.png" alt="" class="w-full">
+        <img src="${data.image_url}" alt="" class="w-full">
         <div>
             <strong class="md:text-[25px] text-[20px]">${data.title}</strong><br><br>
             <p class="text-[12px]">${data.created_at}</p><br>

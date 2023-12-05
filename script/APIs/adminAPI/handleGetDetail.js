@@ -98,6 +98,13 @@ function displayProductDetail(data) {
     descHtml += `<p class="text-sm text-justify mt-[20px]">${data.description}</p>`;
     desc.innerHTML = descHtml;
 
+    localStorage.setItem("proid", proId);
+    localStorage.setItem("proname", data.product_name);
+    localStorage.setItem("price", data.price);
+    localStorage.setItem("description", data.description);
+    localStorage.setItem("color", data.color);
+    localStorage.setItem("size", JSON.stringify(sizes));
+    localStorage.setItem("quantity", JSON.stringify(data.quantity));
     document.getElementById("add-to-cart-btn").addEventListener('click', () => {
         const params = {
             "product_id": Number(proId),
