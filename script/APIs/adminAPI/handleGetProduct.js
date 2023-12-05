@@ -45,5 +45,7 @@ function displayProducts(data) {
         }
     })
     productContainer.innerHTML += html;
+
+    
 }
 
