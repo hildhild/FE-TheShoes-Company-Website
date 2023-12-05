@@ -59,7 +59,11 @@ function handleLogin() {
         sessionStorage.setItem("role", data.data.role);
 
         handleHeader();
-        window.location.href = "../index.html";
+        if (data.data.role === "ADMIN") {
+          window.location.href = "../pages/admin/";
+        } else {
+          window.location.href = "../index.html";
+        }
       })
       .catch((error) => {
         console.error("Error:", error);
@@ -68,3 +72,5 @@ function handleLogin() {
     alert("Please enter both email and password.");
   }
 }
+
+
