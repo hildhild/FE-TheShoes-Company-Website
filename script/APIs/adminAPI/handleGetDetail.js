@@ -9,6 +9,30 @@ function convertTime(utcTimestamp) {
     console.log(dateGmtPlus7.toLocaleString())
     return dateGmtPlus7.toLocaleString();
 }
+
+function handleDeleteProduct(deleteData) {
+    const URL = "http://localhost:8000/product";
+    fetch(URL, {
+        method: 'DELETE',
+        headers: {
+            'Authorization': `Bearer ${sessionStorage.getItem("token")}`,
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(deleteData)
+    })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log('POST request successful:', data);
+        })
+        .catch(error => {
+            console.error('There was a problem with the fetch operation:', error);
+        });
+}
 function getProductDetail() {
     const getProductURL = "http://localhost:8000/product/";
     fetch(getProductURL + proId)
@@ -97,6 +121,14 @@ function displayProductDetail(data) {
     descHtml += `<p class="text-base font-semibold mt-[20px]">${data.product_name}</p>`;
     descHtml += `<p class="text-sm text-justify mt-[20px]">${data.description}</p>`;
     desc.innerHTML = descHtml;
+
+    localStorage.setItem("proid", proId);
+    localStorage.setItem("proname", data.product_name);
+    localStorage.setItem("price", data.price);
+    localStorage.setItem("description", data.description);
+    localStorage.setItem("color", data.color);
+    localStorage.setItem("size", JSON.stringify(sizes));
+    localStorage.setItem("quantity", JSON.stringify(data.quantity));
     document.getElementById("add-to-cart-btn").addEventListener('click', () => {
         const params = {
             "product_id": Number(proId),
@@ -110,8 +142,12 @@ function displayProductDetail(data) {
         addtoCart(params);
         location.reload();
     })
-
-    
+    document.getElementById("delete-btn").addEventListener('click', () => {
+        handleDeleteProduct({
+            product_id: proId,
+        })
+        window.location.href = "./ProductAdmin.html"
+    })
 }
 
 function addNewsComment(postData) {
