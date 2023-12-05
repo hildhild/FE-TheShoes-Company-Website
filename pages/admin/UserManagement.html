@@ -171,26 +171,9 @@
             class="w-full md:w-1/4 rounded-xl bg-[#f2f2f2] flex flex-col justify-between p-[20px] gap-[10px]"
           >
             <p class="text-sm font-semibold">Total Users</p>
-            <p class="text-xl font-semibold">614</p>
+            <p id="total-users" class="text-xl font-semibold">0</p>
           </div>
-          <div
-            class="w-full md:w-1/4 rounded-xl bg-[#f2f2f2] flex flex-col justify-between p-[20px] gap-[10px]"
-          >
-            <p class="text-sm font-semibold">Online Users</p>
-            <p class="text-xl font-semibold">614</p>
-          </div>
-          <div
-            class="w-full md:w-1/4 rounded-xl bg-[#f2f2f2] flex flex-col justify-between p-[20px] gap-[10px]"
-          >
-            <p class="text-sm font-semibold">Ban Users</p>
-            <p class="text-xl font-semibold">614</p>
-          </div>
-          <div
-            class="w-full md:w-1/4 rounded-xl bg-[#f2f2f2] flex flex-col justify-between p-[20px] gap-[10px]"
-          >
-            <p class="text-sm font-semibold">Guests</p>
-            <p class="text-xl font-semibold">614</p>
-          </div>
+          
         </div>
         <div class="overflow-x-scroll md:overflow-hidden">
           <div class="mt-[20px] w-[684px] md:w-auto">
@@ -199,75 +182,13 @@
             >
               <div class="min-w-[20%]">Name</div>
               <div class="min-w-[15%]">User ID</div>
-              <div class="min-w-[15%]">Username</div>
+              <div class="min-w-[15%]">Email</div>
               <div class="min-w-[20%]">Date</div>
               <div class="min-w-[15%]">Role</div>
               <div class="min-w-[15%]">Action</div>
             </div>
-            <div
-              class="flex flex-row text-base text-black bg-white p-[20px] border border-[#d1d1d1] rounded-lg mt-2.5"
-            >
-              <div class="min-w-[20%]">Victoria Perez</div>
-              <div class="min-w-[15%]">LA-0234</div>
-              <div class="min-w-[15%]">perez_1502</div>
-              <div class="min-w-[20%]">21 Aug, 2019</div>
-              <div class="min-w-[15%]">Admin</div>
-              <div
-                class="min-w-[15%] flex flex-row justify-start items-center text-xl gap-4"
-              >
-                <i class="fa-solid fa-circle-info cursor-pointer"></i>
-                <i class="fa-solid fa-user-xmark cursor-pointer"></i>
-                <i class="fa-solid fa-user-minus cursor-pointer"></i>
-              </div>
-            </div>
-            <div
-              class="flex flex-row text-base text-black bg-white p-[20px] border border-[#d1d1d1] rounded-lg mt-2.5"
-            >
-              <div class="min-w-[20%]">Victoria Perez</div>
-              <div class="min-w-[15%]">LA-0234</div>
-              <div class="min-w-[15%]">perez_1502</div>
-              <div class="min-w-[20%]">21 Aug, 2019</div>
-              <div class="min-w-[15%]">Admin</div>
-              <div
-                class="min-w-[15%] flex flex-row justify-start items-center text-xl gap-4"
-              >
-                <i class="fa-solid fa-circle-info cursor-pointer"></i>
-                <i class="fa-solid fa-user-xmark cursor-pointer"></i>
-                <i class="fa-solid fa-user-minus cursor-pointer"></i>
-              </div>
-            </div>
-            <div
-              class="flex flex-row text-base text-black bg-white p-[20px] border border-[#d1d1d1] rounded-lg mt-2.5"
-            >
-              <div class="min-w-[20%]">Victoria Perez</div>
-              <div class="min-w-[15%]">LA-0234</div>
-              <div class="min-w-[15%]">perez_1502</div>
-              <div class="min-w-[20%]">21 Aug, 2019</div>
-              <div class="min-w-[15%]">Admin</div>
-              <div
-                class="min-w-[15%] flex flex-row justify-start items-center text-xl gap-4"
-              >
-                <i class="fa-solid fa-circle-info cursor-pointer"></i>
-                <i class="fa-solid fa-user-xmark cursor-pointer"></i>
-                <i class="fa-solid fa-user-minus cursor-pointer"></i>
-              </div>
-            </div>
-            <div
-              class="flex flex-row text-base text-black bg-white p-[20px] border border-[#d1d1d1] rounded-lg mt-2.5"
-            >
-              <div class="min-w-[20%]">Victoria Perez</div>
-              <div class="min-w-[15%]">LA-0234</div>
-              <div class="min-w-[15%]">perez_1502</div>
-              <div class="min-w-[20%]">21 Aug, 2019</div>
-              <div class="min-w-[15%]">Admin</div>
-              <div
-                class="min-w-[15%] flex flex-row justify-start items-center text-xl gap-4"
-              >
-                <i class="fa-solid fa-circle-info cursor-pointer"></i>
-                <i class="fa-solid fa-user-xmark cursor-pointer"></i>
-                <i class="fa-solid fa-user-minus cursor-pointer"></i>
-              </div>
-            </div>
+            <div id="users-container"></div>
+            
           </div>
         </div>
       </div>
@@ -323,5 +244,6 @@
     <script src="../../script/ProductDetail.js"></script>
     <script src="../../script/login.js"></script>
     <script src="../../script/permission.js"></script>
+    <script src="../../script/APIs/adminAPI/handleGetAllUsers.js"></script>
   </body>
 </html>
