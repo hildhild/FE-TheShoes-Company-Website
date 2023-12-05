@@ -19,7 +19,6 @@
     <title>Document</title>
   </head>
 
-  <body>
     <div id="main">
       <div
         class="sign flex flex-row h-[30px] fixed top-0 left-0 right-0 z-50 items-center md:px-[20px] px-[10px] justify-between bg-[#f2f2f2] text-sm"
@@ -144,72 +143,20 @@
           </div>
         </div>
       </div>
-      <!-- END HEAR -->
       <div
-        class="lg:px-[80px] px-[42px] lg:py-[40px] md:py-[28px] py-[24px] mt-[95px]"
+        class="order-detail-container lg:px-[100px] px-[20px] py-[50px] mt-[95px]"
       >
-        <h2 class="text-[36px] font-semibold">Orders Management</h2>
-        <div class="relative mt-[20px]">
-          <form action="">
-            <input
-              type="text"
-              id="search-order"
-              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-2.5 pl-2.5 pr-12"
-              placeholder="Search Order..."
-              required
-            />
-            <button
-              type="submit"
-              class="px-2 py-1 absolute right-[10px] bottom-1/2 translate-y-1/2"
-            >
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-          </form>
+        <div class="flex flex-row flex-start items-center gap-[10px] mb-[50px]">
+          <i class="fa-solid fa-chevron-left cursor-pointer block"></i>
+          <p class="text-base underline underline-offset-4">
+            <a href="./OrderManagement.html">Back to Order Management</a>
+          </p>
         </div>
-        <div class="flex flex-col md:flex-row gap-4 mt-[20px]">
-          <div
-            class="w-full md:w-1/4 rounded-xl bg-[#f2f2f2] flex flex-col justify-between p-[20px] gap-[10px]"
-          >
-            <p class="text-sm font-semibold">Total Orders</p>
-            <p class="text-xl font-semibold" id="total-orders"></p>
-          </div>
-          <div
-            class="w-full md:w-1/4 rounded-xl bg-[#f2f2f2] flex flex-col justify-between p-[20px] gap-[10px]"
-          >
-            <p class="text-sm font-semibold">Shipping Orders</p>
-            <p class="text-xl font-semibold" id="shipping-orders"></p>
-          </div>
-          <div
-            class="w-full md:w-1/4 rounded-xl bg-[#f2f2f2] flex flex-col justify-between p-[20px] gap-[10px]"
-          >
-            <p class="text-sm font-semibold">Rejected Orders</p>
-            <p class="text-xl font-semibold" id="rejected-orders"></p>
-          </div>
-          <div
-            class="w-full md:w-1/4 rounded-xl bg-[#f2f2f2] flex flex-col justify-between p-[20px] gap-[10px]"
-          >
-            <p class="text-sm font-semibold">Ordered Orders</p>
-            <p class="text-xl font-semibold" id="ordered-orders"></p>
-          </div>
+        <div class="order-detail bg-[#F2F2F2] w-full p-[30px] rounded-xl" id="order-detail-container">
         </div>
-        <div class="overflow-x-scroll lg:overflow-hidden">
-          <div class="mt-[20px] min-w-[900px] lg:w-auto">
-            <div
-              class="flex flex-row text-base font-semibold text-[#8F9BB3] bg-[#EFF4FA] p-[20px] rounded-lg"
-            >
-              <div class="min-w-[10%]">Order ID</div>
-              <div class="min-w-[17%]">Name</div>
-              <div class="min-w-[13%]">User ID</div>
-              <div class="min-w-[20%]">Created At</div>
-              <div class="min-w-[15%]">Total Price</div>
-              <div class="min-w-[15%]">Status</div>
-              <div class="min-w-[10%]">Action</div>
-            </div>
-            <div id="orders-container">
-            </div>
-          </div>
-        </div>
+        <br /><br /><br />
       </div>
+
       <div class="footer bg-[#f2f2f2]">
         <div
           class="flex flex-row flex-wrap lg:flex-nowrap lg:py-[24px] lg:px-[193px] md:px-[200px] items-start lg:gap-[82px] px-[50px] py-[50px]"
@@ -243,7 +190,7 @@
                 <input
                   type="text"
                   id="small-input"
-                  class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-xs"
+                  class="block w-full p-2 text-black border border-gray-300 rounded-lg bg-gray-50 sm:text-xs"
                 />
                 <button
                   type="submit"
@@ -258,11 +205,9 @@
         </div>
       </div>
     </div>
-    <script src="../../script/header.js"></script>
-    <script src="../../script/Home.js"></script>
     <script src="../../script/login.js"></script>
+    <script src="../../script/header.js"></script>
     <script src="../../script/permission.js"></script>
-    <script src="../../script/APIs/adminAPI/handleGetAllOrders.js"></script>
-
+    <script src="../../script/APIs/adminAPI/handleGetOrderDetailAdmin.js"></script>
   </body>
 </html>
