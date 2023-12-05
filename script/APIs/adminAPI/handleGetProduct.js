@@ -27,16 +27,16 @@ function displayProducts(data) {
     let html = '';
     data.forEach((value, index) => {
         if (index % 3 === 0) {
-            html += '<div class="flex flex-col lg:flex-row lg:gap-[122.5px] mb-[25px]">';
+            html += '<div class="flex flex-col lg:flex-row mb-[25px] lg:mx-[-32px]">';
         }
         html += `
-        <div class="w-full lg:w-1/3 lg:mb-0 mb-[25px]">
+        <div class="w-full lg:w-1/3 lg:mb-0 mb-[32px] lg:px-4">
             <a href="./ProductDetail_admin.html?id=${value.product_id}" class="block overflow-hidden">
                 <div class="mb-2">
-                    <img src="../../images/puma.png" alt="">
+                    <img src="../../images/puma.png" alt="" class="block w-full">
                 </div>
                 <p class="text-base font-semibold">${value.product_name}</p>
-                <p class="float-right mt-[10px]">${value.price}</p>
+                <p class="float-right mt-[10px] ">${value.price}</p>
             </a>
         </div>
         `;
