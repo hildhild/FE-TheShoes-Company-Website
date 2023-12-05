@@ -8,7 +8,7 @@ function getProducts() {
             return response.json();
         })
         .then(data => {
-            //console.log(data.data);
+            console.log(data.data);
             displayProducts(data.data);
         })
         .catch(error => {
@@ -33,7 +33,7 @@ function displayProducts(data) {
         <div class="w-full lg:w-1/3 lg:mb-0 mb-[25px]">
             <a href="./ProductDetail.html?id=${value.product_id}" class="block overflow-hidden">
                 <div class="mb-2">
-                    <img src="../images/puma.png" alt="">
+                    <img src=${value.thumbnails[0]} alt="">
                 </div>
                 <p class="text-base font-semibold">${value.product_name}</p>
                 <p class="float-right mt-[10px]">${value.price}</p>

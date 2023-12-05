@@ -10,7 +10,7 @@ document.getElementById('add-product-form').addEventListener('submit', (e) => {
     const link3 = document.getElementById('img3-link').value;
     const link4 = document.getElementById('img4-link').value;
     const category = document.getElementById('category').value;
-    const description = document.getElementById('description')
+    const description = document.getElementById('description').value
     handleAddProduct({
         product_name: name,
         price: price,
