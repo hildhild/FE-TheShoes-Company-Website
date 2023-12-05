@@ -1,3 +1,11 @@
+function convertTime(utcTimestamp) {
+    const dateUtc = new Date(utcTimestamp);
+    const utcMilliseconds = dateUtc.getTime();
+    const gmtPlus7Offset = 7 * 60 * 60 * 1000;
+    const gmtPlus7Milliseconds = utcMilliseconds + gmtPlus7Offset;
+    const dateGmtPlus7 = new Date(gmtPlus7Milliseconds);
+    return dateGmtPlus7.toLocaleString();
+}
 function getAllOrders() {
     const getOrdersURL = `http://localhost:8000/order/order-list`; 
 
@@ -91,7 +99,7 @@ function displayAllOrders(orders) {
               <div class="min-w-[10%]">${value.order_id}</div>
               <div class="min-w-[17%]">${value.user_name}</div>
               <div class="min-w-[13%]">${value.user_id}</div>
-              <div class="min-w-[20%]">${value.created_at}</div>
+              <div class="min-w-[20%]">${convertTime(value.created_at)}</div>
               <div class="min-w-[15%]">$${value.total_money}</div>
               <div class="min-w-[15%] pr-[24px]">
                 ${html_select_status}
