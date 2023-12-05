@@ -3,8 +3,8 @@ function handlePermission() {
     sessionStorage.getItem("role") !== "STUDENT" &&
     sessionStorage.getItem("role") !== "ADMIN"
   ) {
-    window.location.href = "../index.html";
-    // alert("You need to login");
+    alert("You need to login");
+    window.location.href = "./login.html";
   }
 }
 

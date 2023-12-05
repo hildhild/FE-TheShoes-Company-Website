@@ -5,16 +5,21 @@ function handleHeader() {
   var loginButton = document.getElementById("loginbutton1.1");
   var logoutButton = document.getElementById("logoutbutton1.1");
   var userNameField = document.getElementById("userName");
+  var HistoryNav = document.getElementById("HistoryID");
+  if (HistoryNav) console.log("HEllo");
+  else console.log("No Hello");
   userNameField.textContent = user_name;
 
   if (token) {
     loginButton.classList.add("hidden");
     logoutButton.classList.add("inline-block");
     userNameField.classList.add("inline-block");
+    // HistoryNav.classList.add("inline-block");
   } else {
     loginButton.classList.add("inline-block");
     logoutButton.classList.add("hidden");
     userNameField.classList.add("hidden");
+    // HistoryNav.classList.add("hidden");
   }
 
   logoutButton.addEventListener("click", function () {
