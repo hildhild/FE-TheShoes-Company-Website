@@ -9,6 +9,30 @@ function convertTime(utcTimestamp) {
     console.log(dateGmtPlus7.toLocaleString())
     return dateGmtPlus7.toLocaleString();
 }
+
+function handleDeleteProduct(deleteData) {
+    const URL = "http://localhost:8000/product";
+    fetch(URL, {
+        method: 'DELETE',
+        headers: {
+            'Authorization': `Bearer ${sessionStorage.getItem("token")}`,
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(deleteData)
+    })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log('POST request successful:', data);
+        })
+        .catch(error => {
+            console.error('There was a problem with the fetch operation:', error);
+        });
+}
 function getProductDetail() {
     const getProductURL = "http://localhost:8000/product/";
     fetch(getProductURL + proId)
@@ -117,6 +141,12 @@ function displayProductDetail(data) {
         }
         addtoCart(params);
         location.reload();
+    })
+    document.getElementById("delete-btn").addEventListener('click', () => {
+        handleDeleteProduct({
+            product_id: proId,
+        })
+        window.location.href = "./ProductAdmin.html"
     })
 }
 
