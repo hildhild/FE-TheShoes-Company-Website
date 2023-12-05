@@ -67,10 +67,9 @@ function handleLogin() {
       })
       .catch((error) => {
         console.error("Error:", error);
+        alert("Login Failed");
       });
   } else {
     alert("Please enter both email and password.");
   }
 }
-
-
