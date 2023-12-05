@@ -93,6 +93,7 @@ function displayNewsDetail(data, comments) {
     newsDetailContainer.innerHTML += html;
     document.getElementById("submit-add-cmt").addEventListener('click', () => {
         const commentContent = document.getElementById("comment-content").value;
+        if (commentContent === "") return;
         const params = {
             user_id: sessionStorage.getItem("user_id"),
             content: commentContent,

@@ -9,12 +9,97 @@
   <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;700;900&display=swap"
     rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="../../css/header.css" />
   <script src="https://kit.fontawesome.com/f776702b05.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../../css/main.css" />
+  <link rel="stylesheet" href="../../css/style.css" />
   <title>Document</title>
 </head>
 
 <body>
+  <div
+    class="sign flex flex-row h-[30px] fixed top-0 left-0 right-0 z-50 items-center md:px-[20px] px-[10px] justify-between bg-[#f2f2f2] text-sm">
+    <p class="block">Free shipping on orders above $200 (US only)</p>
+    <p class="md:ml-auto md:mr-[56px] mr-[10px]">
+      <a href="../Account.html" id="userName">User1234</a>
+    </p>
+    <p class="cursor-pointer" id="logoutbutton1">
+      <a href="#" id="logoutbutton1.1">Log out</a>
+    </p>
+    <p class="cursor-pointer" id="loginbutton1">
+      <a id="loginbutton1.1" href="../Login.html">Log in</a>
+    </p>
+  </div>
+  <div class="header flex justify-between lg:px-[60px] px-[34px] bg-[#f2f2f2] fixed top-[30px] left-0 right-0 z-50">
+    <div class="header__logo order-2 lg:order-1">
+      <img src="../../images/logo.svg" alt="" />
+    </div>
+    <div class="header__navbar flex items-center order-1 lg:order-2 lg:mr-auto lg:ml-[62px]">
+      <i class="header__navbar-icon lg:hidden fa-solid fa-bars text-3xl"></i>
+      <div
+        class="header__navbar-container custom-hidden flex flex-col absolute top-[65px] left-0 right-0 items-start lg:static lg:flex-row lg:items-center bg-white lg:bg-[#f2f2f2]">
+        <div
+          class="lg:hidden header__search-container header__navbar-item w-full md:px-[25px] px-[18px] py-[10px] relative">
+          <form action="">
+            <input type="text" id="search-info"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-2.5 pl-2.5 pr-12"
+              placeholder="Search..." required />
+            <div class="header__search text-2xl px-4 absolute bottom-1/2 translate-y-1/2 right-[2%]">
+              <button type="submit" class="px-2 py-1">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div class="header__navbar-item w-full">
+          <a href="../../index.html"
+            class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl">Home</a>
+        </div>
+        <div class="header__navbar-item w-full">
+          <a href="../About.html"
+            class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl">Products</a>
+        </div>
+        <div class="header__navbar-item w-full">
+          <a href="./OrderManagement.html"
+            class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl">Order</a>
+        </div>
+        <div class="header__navbar-item w-full">
+          <a href="../OrderHistory.html"
+            class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl">History</a>
+        </div>
+        <div class="header__navbar-item w-full">
+          <a href="#"
+            class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl">News</a>
+        </div>
+        <div class="header__navbar-item w-full">
+          <a href="../About.html"
+            class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl">About</a>
+        </div>
+      </div>
+    </div>
+    <div class="header__lg-search hidden lg:block text-2xl px-4 py-[10px] cursor-pointer order-3 relative min-w-[25%]">
+      <i class="fa-solid fa-magnifying-glass absolute bottom-1/2 translate-y-1/2 right-[10%]"></i>
+      <div class="header__lg-search">
+        <form action="">
+          <input type="text" id="search-info"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-2.5 pl-2.5 pr-12"
+            placeholder="Search..." required />
+        </form>
+      </div>
+    </div>
+    <div class="header__icon flex items-center order-4">
+      <div class="header__cart text-2xl px-4 py-[16.5px] cursor-pointer">
+        <a href="../Cart.html">
+          <i class="fa-solid fa-cart-shopping"></i>
+        </a>
+      </div>
+      <div class="header__user text-2xl px-4 py-[16.5px] cursor-pointer">
+        <a href="../Account.html" id="userName">
+          <i class="fa-solid fa-user"></i>
+        </a>
+      </div>
+    </div>
+  </div>
   <div class="news-detail-container my-[50px] lg:mx-[100px] md:mx-[50px] mx-[25px]">
     <strong class="md:text-[25px] text-[20px]">Edit news</strong><br /><br />
     <form class="w-full" id="edit-form">

@@ -9,6 +9,31 @@ function convertTime(utcTimestamp) {
     console.log(dateGmtPlus7.toLocaleString())
     return dateGmtPlus7.toLocaleString();
 }
+
+function handleDeleteNews(deleteData) {
+    const URL = "http://localhost:8000/news/";
+    fetch(URL + newsId, {
+        method: 'DELETE',
+        headers: {
+            'Authorization': `Bearer ${sessionStorage.getItem("token")}`,
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(deleteData)
+    })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log('POST request successful:', data);
+        })
+        .catch(error => {
+            console.error('There was a problem with the fetch operation:', error);
+        });
+}
+
 function getNewsDetail() {
     const getNewsURL = "http://localhost:8000/news/";
     fetch(getNewsURL + newsId)
@@ -64,7 +89,7 @@ function displayNewsDetail(data, comments) {
         <img src=${data.image_url} alt="" class="w-full">
         <div>
             <strong class="md:text-[25px] text-[20px]">${data.title}</strong><br><br>
-            <p class="text-[12px]">${data.created_at}</p><br>
+            <p class="text-[12px]">${convertTime(data.created_at)}</p><br>
             <p class="text-justify">
                 ${data.content}
             </p>
@@ -97,6 +122,7 @@ function displayNewsDetail(data, comments) {
     newsDetailContainer.innerHTML += html;
     document.getElementById("submit-add-cmt").addEventListener('click', () => {
         const commentContent = document.getElementById("comment-content").value;
+        if (commentContent === "") return;
         const params = {
             user_id: sessionStorage.getItem("user_id"),
             content: commentContent,
@@ -106,6 +132,12 @@ function displayNewsDetail(data, comments) {
         }
         addNewsComment(params);
         location.reload();
+    })
+    document.getElementById("delete-btn").addEventListener('click', () => {
+        handleDeleteNews({
+            news_id: Number(newsId)
+        })
+        window.location.href = "./NewsAdmin.html";
     })
 }
 
