@@ -26,7 +26,7 @@ document.getElementById("edit-form").addEventListener('submit', (e) => {
         size: document.getElementById("product-size").value.split(','),
         quantity: document.getElementById("product-stock").value
     })
-    //window.location.href = "./ProductAdmin.html"
+    window.location.href = "./ProductAdmin.html"
 })
 
 
