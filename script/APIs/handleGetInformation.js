@@ -54,7 +54,6 @@ function cancelEditInformation() {
 }
 
 function updateInformation() {
-    const getIn4URL = `http://localhost:8000/user/information`; 
     var userID = sessionStorage.getItem('user_id');
     var name = document.getElementById('account-name').value;
     var country = document.getElementById('account-country').value;
@@ -66,21 +65,7 @@ function updateInformation() {
     var card_number = document.getElementById('card-number').value;
     var exp = document.getElementById('exp-date').value;
     var cvv = document.getElementById('cvv').value;
-    console.log({
-        user_id: userID,
-        user_name: name,
-        country: country,
-        province: state,
-        city: city,
-        phone_number: phone,
-        address: address,
-        card_name: card_name,
-        card_number: card_number,
-        card_expiration: exp,
-        vcc: cvv
-        
-    });
-    fetch(getIn4URL, {
+    fetch('http://localhost:8000/user/information', {
         method: 'PUT',
         headers: {
             'Authorization': `Bearer ${sessionStorage.getItem("token")}`,
@@ -98,7 +83,6 @@ function updateInformation() {
             card_number: card_number,
             card_expiration: exp,
             vcc: cvv
-            
         })
     }).then(response => {
             if (!response.ok) {
@@ -113,7 +97,4 @@ function updateInformation() {
         .catch(error => {
             console.error('There was a problem with the fetch operation:', error);
         })
-
-
-        alert(1);
 }

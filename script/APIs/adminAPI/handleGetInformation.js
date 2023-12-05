@@ -54,7 +54,7 @@ function cancelEditInformation() {
 }
 
 function updateInformation() {
-    const getIn4URL = `http://localhost:8000/user/information`; 
+    const getIn4URL = 'http://localhost:8000/user/information'; 
     var userID = sessionStorage.getItem('user_id');
     var name = document.getElementById('account-name').value;
     var country = document.getElementById('account-country').value;
