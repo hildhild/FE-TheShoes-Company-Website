@@ -16,7 +16,7 @@
     ></script>
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./css/style.css" />
-    <title>Document</title>
+    <title>The Shoes</title>
   </head>
 
   <body>
@@ -24,12 +24,12 @@
       <div
         class="sign flex flex-row h-[30px] fixed top-0 left-0 right-0 z-50 items-center md:px-[20px] px-[10px] justify-between bg-[#f2f2f2] text-sm"
       >
-        <p class="block">Free shipping on orders above $200 (US only)</p>
+        <p class="block"></p>
         <p class="md:ml-auto md:mr-[56px] mr-[10px]">
           <a href="./pages/Account.html" id="userName">User1234</a>
         </p>
         <p class="cursor-pointer" id="logoutbutton1">
-          <a href="#" id="logoutbutton1.1">Log out</a>
+          <a href="../index.html" id="logoutbutton1.1">Log out</a>
         </p>
         <p class="cursor-pointer" id="loginbutton1">
           <a id="loginbutton1.1" href="./pages/Login.html">Log in</a>
@@ -73,7 +73,7 @@
 
             <div class="header__navbar-item w-full">
               <a
-                href="#"
+                href="/"
                 class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl"
                 >Home</a
               >
@@ -85,8 +85,9 @@
                 >Products</a
               >
             </div>
-            <div class="header__navbar-item w-full">
+            <div class="header__navbar-item w-full" id="HistoryID">
               <a
+                id="historyLink"
                 href="./pages/OrderHistory.html"
                 class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl"
                 >History</a
@@ -133,7 +134,9 @@
             </a>
           </div>
           <div class="header__user text-2xl px-4 py-[16.5px] cursor-pointer">
-            <i class="fa-solid fa-user"></i>
+            <a href="./pages/Account.html" id="userName">
+              <i class="fa-solid fa-user"></i>
+            </a>
           </div>
         </div>
       </div>
@@ -322,8 +325,10 @@
         </div>
         <div class="md:px-[75px] px-[50px] pt-[20px] pb-[84px]">
           <p class="text-2xl font-bold underline mb-8">Latest news</p>
-          <div class="flex flex-col lg:flex-row lg:gap-[122.5px]" id="latest-news-container">
-          </div>
+          <div
+            class="flex flex-col lg:flex-row lg:gap-[122.5px]"
+            id="latest-news-container"
+          ></div>
         </div>
       </div>
       <div class="footer bg-[#f2f2f2]">

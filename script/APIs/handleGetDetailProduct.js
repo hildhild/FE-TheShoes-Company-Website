@@ -111,7 +111,7 @@ function displayProductDetail(data) {
             "color": `${data.color}`
         }
         addtoCart(params);
-        location.reload();
+        location.href = "./Cart.html";
     })
     
 }
@@ -170,6 +170,7 @@ function displayComments(data) {
         `;
     });
     reviews.innerHTML = html;
+    
     document.getElementById("add-cmt-btn").addEventListener('click', () => {
         const commentContent = document.getElementById("review-content").value;
         console.log(commentContent);

@@ -150,7 +150,10 @@ function displayCart(data) {
     var checkoutBtn = document.getElementById("checkout-btn");
     checkoutBtn.addEventListener('click', () => {
         const postValue = {};
-        if (data.length === 0) return;
+        if (data.length === 0 || data[data.length - 1].superTotalMoney === 0) {
+            alert("Nothing to checkout");
+            return;
+        };
         postValue.email = sessionStorage.getItem("email");
         postValue.user_name = sessionStorage.getItem("user_name");
         handleCheckout({...postValue, "country": "VN",

@@ -36,7 +36,7 @@ document.getElementById("edit-form").addEventListener('submit', (e) => {
             document.getElementById("img4-link").value
         ]
     })
-    window.location.href = "./ProductAdmin.html"
+    window.location.href = `./ProductDetail_admin.html?id=${id}`
 })
 
 
