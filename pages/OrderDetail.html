@@ -16,7 +16,7 @@
     ></script>
     <link rel="stylesheet" href="../css/main.css" />
     <link rel="stylesheet" href="../css/style.css" />
-    <title>Document</title>
+    <title>The Shoes</title>
   </head>
 
   <body>
@@ -24,15 +24,15 @@
       <div
         class="sign flex flex-row h-[30px] fixed top-0 left-0 right-0 z-50 items-center md:px-[20px] px-[10px] justify-between bg-[#f2f2f2] text-sm"
       >
-        <p class="block">Free shipping on orders above $200 (US only)</p>
+        <p class="block"></p>
         <p class="md:ml-auto md:mr-[56px] mr-[10px]">
           <a href="./Account.html" id="userName">User1234</a>
         </p>
         <p class="cursor-pointer" id="logoutbutton1">
-          <a href="#" id="logoutbutton1.1">Log out</a>
+          <a href="../index.html" id="logoutbutton1.1">Log out</a>
         </p>
         <p class="cursor-pointer" id="loginbutton1">
-          <a   id="loginbutton1.1" href="./Login.html">Log in</a>
+          <a id="loginbutton1.1" href="./Login.html">Log in</a>
         </p>
       </div>
       <div
@@ -85,9 +85,10 @@
                 >Products</a
               >
             </div>
-            <div class="header__navbar-item w-full">
+            <div class="header__navbar-item w-full" id="HistoryID">
               <a
-                href="#"
+                id="historyLink"
+                href="./OrderHistory.html"
                 class="md:px-[25px] px-[18px] lg:py-[16.5px] py-[10px] block w-full text-xl font-semibold lg:text-2xl"
                 >History</a
               >
@@ -148,8 +149,10 @@
             <a href="./OrderHistory.html">Back to Order History</a>
           </p>
         </div>
-        <div class="order-detail bg-[#F2F2F2] w-full p-[30px] rounded-xl" id="order-detail-container">
-        </div>
+        <div
+          class="order-detail bg-[#F2F2F2] w-full p-[30px] rounded-xl"
+          id="order-detail-container"
+        ></div>
         <br /><br /><br />
       </div>
 
@@ -204,5 +207,6 @@
     <script src="../script/header.js"></script>
     <script src="../script/login.js"></script>
     <script src="../script/APIs/handleGetOrderDetail.js"></script>
+    <script src="../script/userPermission.js"></script>
   </body>
 </html>

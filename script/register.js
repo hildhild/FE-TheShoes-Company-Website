@@ -15,7 +15,7 @@ function handleRegister() {
     }
 
     const data = {
-      name: nameValue,
+      user_name: nameValue,
       email: emailValue,
       password: passwordValue,
       confirm_password: confirmPasswordValue,
@@ -35,10 +35,12 @@ function handleRegister() {
         console.log(data);
         alert("Registration successful. Please log in.");
         // Redirect to login page or handle as needed
+        location.reload();
       })
       .catch((error) => {
         console.error("Error:", error);
         alert("Registration failed. Please try again.");
+        location.reload();
       });
   } else {
     alert("Please fill in all fields.");
