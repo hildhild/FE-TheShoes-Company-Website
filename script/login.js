@@ -5,9 +5,8 @@ function handleHeader() {
   var loginButton = document.getElementById("loginbutton1.1");
   var logoutButton = document.getElementById("logoutbutton1.1");
   var userNameField = document.getElementById("userName");
-  var HistoryNav = document.getElementById("HistoryID");
-  if (HistoryNav) console.log("HEllo");
-  else console.log("No Hello");
+  // var HistoryNav = document.getElementById("HistoryID");
+  
   userNameField.textContent = user_name;
 
   if (token) {

@@ -5,7 +5,7 @@ document.getElementById("grid-img-link").value = localStorage.getItem("img");
 localStorage.removeItem("title");
 localStorage.removeItem("content");
 localStorage.removeItem("img");
-
+const id = localStorage.getItem("id");
 
 document.getElementById("edit-form").addEventListener('submit', (e) => {
     e.preventDefault();
@@ -18,10 +18,10 @@ document.getElementById("edit-form").addEventListener('submit', (e) => {
         image_url: img,
         user_id: sessionStorage.getItem("user_id")
     })
-    window.location.href = "./NewsAdmin.html";
+    window.location.href = `./NewsDetailAdmin.html?id=${id}`;
 })
 
-const id = localStorage.getItem("id");
+
 localStorage.removeItem("id");
 function handleEditNews(postData) {
     const URL = "http://localhost:8000/news/";

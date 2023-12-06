@@ -132,6 +132,8 @@ function displayProductDetail(data) {
     localStorage.setItem("color", data.color);
     localStorage.setItem("size", JSON.stringify(sizes));
     localStorage.setItem("quantity", JSON.stringify(data.quantity));
+    localStorage.setItem("thumnails", data.thumbnails);
+    
     document.getElementById("add-to-cart-btn").addEventListener('click', () => {
         const params = {
             "product_id": Number(proId),
@@ -259,3 +261,4 @@ function handleDeleteComment(deleteData, id) {
             console.error('There was a problem with the fetch operation:', error);
         });
 }
+

@@ -94,7 +94,7 @@ function displayCart(data) {
     }
     html += `</div>`;
 
-
+    
     html += `
     <div class="w-full md:w-[60%] md:float-right md:mb-[50px] lg:w-[50%]">
     <div class="bill bg-[#F2F2F2] w-full p-[30px] rounded-xl">
@@ -150,7 +150,10 @@ function displayCart(data) {
     var checkoutBtn = document.getElementById("checkout-btn");
     checkoutBtn.addEventListener('click', () => {
         const postValue = {};
-        if (data.length === 0) return;
+        if (data.length === 0 || data[data.length - 1].superTotalMoney === 0) {
+            alert("Nothing to checkout");
+            return;
+        };
         postValue.email = sessionStorage.getItem("email");
         postValue.user_name = sessionStorage.getItem("user_name");
         handleCheckout({...postValue, "country": "VN",

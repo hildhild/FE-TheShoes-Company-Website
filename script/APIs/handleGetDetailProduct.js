@@ -111,7 +111,7 @@ function displayProductDetail(data) {
             "color": `${data.color}`
         }
         addtoCart(params);
-        location.reload();
+        location.href = "./Cart.html";
     })
     
 }
