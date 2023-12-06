@@ -170,6 +170,7 @@ function displayComments(data) {
         `;
     });
     reviews.innerHTML = html;
+    
     document.getElementById("add-cmt-btn").addEventListener('click', () => {
         const commentContent = document.getElementById("review-content").value;
         console.log(commentContent);
