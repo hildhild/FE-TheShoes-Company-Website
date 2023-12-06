@@ -4,7 +4,7 @@ function convertTime(utcTimestamp) {
     const gmtPlus7Offset = 7 * 60 * 60 * 1000;
     const gmtPlus7Milliseconds = utcMilliseconds + gmtPlus7Offset;
     const dateGmtPlus7 = new Date(gmtPlus7Milliseconds);
-    return dateGmtPlus7.toISOString();
+    return dateGmtPlus7.toLocaleDateString();
 }
 function getAllUsers() {
     const URL = "http://localhost:8000/user/all-user";
@@ -41,13 +41,13 @@ const displayUsers = (users) => {
         class="flex flex-row text-base text-black bg-white p-[20px] border border-[#d1d1d1] rounded-lg mt-2.5">
         `;
         html += `
-        <div class="min-w-[20%]">${user.user_name}</div>
-              <div class="min-w-[15%]">${user.user_id}</div>
-              <div class="min-w-[15%]">${user.email}</div>
-              <div class="min-w-[20%]">${convertTime(user.created_at)}</div>
-              <div class="min-w-[15%]">${user.role}</div>
+        <div class="min-w-[15%]">${user.user_name}</div>
+              <div class="w-[10%]">${user.user_id}</div>
+              <div class="w-[25%]">${user.email}</div>
+              <div class="w-[20%]">${convertTime(user.created_at)}</div>
+              <div class="w-[15%]">${user.role}</div>
               <div
-                class="min-w-[15%] flex flex-row justify-start items-center text-xl gap-4"
+                class="w-[15%] flex flex-row justify-start items-center text-xl gap-4"
               >
                 <i class="fa-solid fa-circle-info cursor-pointer"></i>
                 <i class="fa-solid fa-user-xmark cursor-pointer"></i>

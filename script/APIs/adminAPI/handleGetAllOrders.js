@@ -4,7 +4,7 @@ function convertTime(utcTimestamp) {
     const gmtPlus7Offset = 7 * 60 * 60 * 1000;
     const gmtPlus7Milliseconds = utcMilliseconds + gmtPlus7Offset;
     const dateGmtPlus7 = new Date(gmtPlus7Milliseconds);
-    return dateGmtPlus7.toLocaleString();
+    return dateGmtPlus7.toLocaleDateString();
 }
 function getAllOrders() {
     const getOrdersURL = `http://localhost:8000/order/order-list`; 

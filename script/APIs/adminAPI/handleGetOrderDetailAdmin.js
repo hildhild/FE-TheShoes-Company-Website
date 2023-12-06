@@ -164,8 +164,6 @@ function changeStatus(order_id){
     .catch(error => {
         console.error('Error when changing the status:', error);
     });
-
-
 }
 
 getOrderDetail();
