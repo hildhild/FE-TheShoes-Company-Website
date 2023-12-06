@@ -31,12 +31,12 @@ for (let i = 0; i < sorts.length; i++) {
         if (i === 0) sort = null;
         else if (i === 1) sort = "asc";
         else sort = "desc";
-        console.log(sort, category)
-        getProducts(sort, category);
+        console.log(sort, category, null)
+        getProducts(sort, category, null);
         //location.reload();
     })
 }
-function getProducts(sort, category) {
+function getProducts(sort, category, search) {
     const getProductURL = "http://localhost:8000/product?";
     let params = {};
     if (sort === null && category === null) params = {};
@@ -50,6 +50,7 @@ function getProducts(sort, category) {
         order_by: sort,
         category: category,
     }
+    if (search && search !== "") params = {...params, ...{product_name: search}}
     console.log(params);
     fetch(getProductURL + new URLSearchParams(params))
         .then(response => {
@@ -70,7 +71,7 @@ function getProducts(sort, category) {
 
 
 if (flag) {
-    getProducts(null, null);
+    getProducts(null, null, null);
     flag = false;
 }
 function displayProducts(data) {
@@ -88,7 +89,7 @@ function displayProducts(data) {
         <div class="w-full lg:w-1/3 lg:mb-0 mb-[25px]">
             <a href="./ProductDetail_admin.html?id=${value.product_id}" class="block overflow-hidden">
                 <div class="mb-2">
-                    <img src=${value.thumbnails[0]} alt="" class="block">
+                    <img src=${value.thumbnails[0]} alt="" class="block h-[200px]">
                 </div>
                 <p class="text-base font-semibold">${value.product_name}</p>
                 <p class="float-right mt-[10px]">${value.price}</p>
@@ -102,3 +103,24 @@ function displayProducts(data) {
     productContainer.innerHTML = html;
 }
 
+
+document.getElementById("search-lg-btn").addEventListener("click", () => {
+    const searchLgInput = document.getElementById("search-lg").value.trim();
+    console.log(searchLgInput);
+    if (searchLgInput !== "") {
+        getProducts(sort, category, searchLgInput);
+    }
+    else {
+        getProducts(sort, category, null);
+    }
+}) 
+
+document.getElementById("search-mobile-btn").addEventListener('click', () => {
+    const input = document.getElementById("search-mobile").value.trim();
+    if (input !== "") {
+        getProducts(sort, category, input);
+    }
+    else {
+        getProducts(sort, category, null);
+    }
+})

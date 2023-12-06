@@ -105,9 +105,22 @@ function displayProducts(data) {
 
 
 document.getElementById("search-lg-btn").addEventListener("click", () => {
-    const searchLgInput = document.getElementById("search-lg").value;
+    const searchLgInput = document.getElementById("search-lg").value.trim();
     console.log(searchLgInput);
     if (searchLgInput !== "") {
         getProducts(sort, category, searchLgInput);
     }
+    else {
+        getProducts(sort, category, null);
+    }
 }) 
+
+document.getElementById("search-mobile-btn").addEventListener('click', () => {
+    const input = document.getElementById("search-mobile").value.trim();
+    if (input !== "") {
+        getProducts(sort, category, input);
+    }
+    else {
+        getProducts(sort, category, null);
+    }
+})
