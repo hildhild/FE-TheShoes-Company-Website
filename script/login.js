@@ -72,6 +72,13 @@ function handleLogin() {
       })
       .catch((error) => {
         console.error("Error:", error);
+        sessionStorage.removeItem("token");
+        sessionStorage.removeItem("user_id");
+        sessionStorage.removeItem("user_name");
+        sessionStorage.removeItem("email");
+        sessionStorage.removeItem("role");
+        location.reload();
+
         alert("Login Failed");
       });
   } else {
