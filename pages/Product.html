@@ -66,8 +66,8 @@
         class="header__navbar-container custom-hidden flex flex-col absolute top-[65px] left-0 right-0 items-start lg:static lg:flex-row lg:items-center bg-white lg:bg-[#f2f2f2]">
         <div
           class="lg:hidden header__search-container header__navbar-item w-full md:px-[25px] px-[18px] py-[10px] relative">
-          <form action="">
-            <input type="text" id="search-info"
+          <form action="" id="search-mobile-form">
+            <input type="text" id="search-mobile"
               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-2.5 pl-2.5 pr-12"
               placeholder="Search..." required />
             <div class="header__search text-2xl px-4 absolute bottom-1/2 translate-y-1/2 right-[2%]">
@@ -101,10 +101,10 @@
       </div>
     </div>
     <div class="header__lg-search hidden lg:block text-2xl px-4 py-[10px] cursor-pointer order-3 relative min-w-[25%]">
-      <i class="fa-solid fa-magnifying-glass absolute bottom-1/2 translate-y-1/2 right-[10%]"></i>
+      <i id="search-lg-btn" class="fa-solid fa-magnifying-glass absolute bottom-1/2 translate-y-1/2 right-[10%]"></i>
       <div class="header__lg-search">
-        <form action="">
-          <input type="text" id="search-info"
+        <form action="" id="search-lg-form">
+          <input type="text" id="search-lg"
             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-2.5 pl-2.5 pr-12"
             placeholder="Search..." required />
         </form>
