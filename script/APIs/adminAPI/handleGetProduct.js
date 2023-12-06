@@ -86,7 +86,7 @@ function displayProducts(data) {
         }
         html += `
         <div class="w-full lg:w-1/3 lg:mb-0 mb-[25px]">
-            <a href="./ProductDetail.html?id=${value.product_id}" class="block overflow-hidden">
+            <a href="./ProductDetail_admin.html?id=${value.product_id}" class="block overflow-hidden">
                 <div class="mb-2">
                     <img src=${value.thumbnails[0]} alt="" class="block">
                 </div>

@@ -89,7 +89,10 @@ function displayProductDetail(data) {
     </button>
 </div>`;
     detailContainer.innerHTML = html;
-
+    const img = document.querySelectorAll(".product__img > img");
+    for (let idx = 0; idx < img.length; idx++) {
+        img[idx].src = data.thumbnails[idx] ? data.thumbnails[idx] : data.thumbnails[0]
+    }
     const desc = document.getElementById("product-desc");
     let descHtml = "";
 
@@ -110,7 +113,6 @@ function displayProductDetail(data) {
         addtoCart(params);
         location.reload();
     })
-
     
 }
 
