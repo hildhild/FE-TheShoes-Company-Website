@@ -107,7 +107,7 @@ function displayProductDetail(data) {
             "quantity": Number(document.getElementById('quantity').value),
             "price": Number(`${data.price}`),
             "product_name": `${data.product_name}`,
-            "thumbnail": `${data.combined_thumbnails[0]}`,
+            "thumbnail": `${data.thumbnails[0]}`,
             "color": `${data.color}`
         }
         addtoCart(params);
