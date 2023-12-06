@@ -66,7 +66,7 @@ function displayProductDetail(data) {
 
     html += `<div class="flex flex-row flex-wrap text-base gap-[10px]">`;
 
-    const sizes = data.combined_sizes.split(',');
+    const sizes = data.sizes;
     html += `<select id="size" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">`
     sizes.forEach((val, index) => {
         html += `<option value=${val}>${val}</option>`
