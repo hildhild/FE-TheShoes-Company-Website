@@ -24,7 +24,7 @@ function displayLatestNews(data) {
         
         html += `
         <div class="w-full lg:w-1/3 flex">
-            <a href="../pages/NewsDetail.html?id=${value.news_id}" class="block">
+            <a href="./NewsDetailAdmin.html?id=${value.news_id}" class="block">
                 <div class="mb-2">
                     <img src="${value.image_url}" alt="">
                 </div>
