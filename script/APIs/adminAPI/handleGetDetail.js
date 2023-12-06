@@ -1,13 +1,37 @@
 var proId = window.location.search.slice(4);
 function convertTime(utcTimestamp) {
     const dateUtc = new Date(utcTimestamp);
-    
+
     const utcMilliseconds = dateUtc.getTime();
     const gmtPlus7Offset = 7 * 60 * 60 * 1000;
     const gmtPlus7Milliseconds = utcMilliseconds + gmtPlus7Offset;
     const dateGmtPlus7 = new Date(gmtPlus7Milliseconds);
     console.log(dateGmtPlus7.toLocaleString())
     return dateGmtPlus7.toLocaleString();
+}
+
+function handleDeleteProduct(deleteData) {
+    const URL = "http://localhost:8000/product";
+    fetch(URL, {
+        method: 'DELETE',
+        headers: {
+            'Authorization': `Bearer ${sessionStorage.getItem("token")}`,
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(deleteData)
+    })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log('POST request successful:', data);
+        })
+        .catch(error => {
+            console.error('There was a problem with the fetch operation:', error);
+        });
 }
 function getProductDetail() {
     const getProductURL = "http://localhost:8000/product/";
@@ -100,6 +124,14 @@ function displayProductDetail(data) {
     descHtml += `<p class="text-base font-semibold mt-[20px]">${data.product_name}</p>`;
     descHtml += `<p class="text-sm text-justify mt-[20px]">${data.description}</p>`;
     desc.innerHTML = descHtml;
+
+    localStorage.setItem("proid", proId);
+    localStorage.setItem("proname", data.product_name);
+    localStorage.setItem("price", data.price);
+    localStorage.setItem("description", data.description);
+    localStorage.setItem("color", data.color);
+    localStorage.setItem("size", JSON.stringify(sizes));
+    localStorage.setItem("quantity", JSON.stringify(data.quantity));
     document.getElementById("add-to-cart-btn").addEventListener('click', () => {
         const params = {
             "product_id": Number(proId),
@@ -113,7 +145,12 @@ function displayProductDetail(data) {
         addtoCart(params);
         location.reload();
     })
-    
+    document.getElementById("delete-btn").addEventListener('click', () => {
+        handleDeleteProduct({
+            product_id: proId,
+        })
+        window.location.href = "./ProductAdmin.html"
+    })
 }
 
 function addNewsComment(postData) {
@@ -163,9 +200,14 @@ function displayComments(data) {
             <p class="review-own text-base font-semibold mt-[5px] mr-[10px]">${val.user_name}</p>
             <p class="review-date text-base font-semibold mt-[5px]"> - ${convertTime(val.created_at)}</p>
         </div>
-        <p class="text-sm text-justify mt-[5px]">
-            ${val.content}
-        </p>
+        <div class="flex items-center justify-between">
+            <p class="text-sm text-justify mt-[5px]">
+                ${val.content}
+            </p>
+            <i data-cmtid=${val.comment_id} class="fa-solid fa-trash block cursor-pointer delete-cmt-icon"></i>
+        </div>
+        
+        
     </div>
         `;
     });
@@ -184,4 +226,36 @@ function displayComments(data) {
         addNewsComment(params);
         location.reload();
     })
+
+    const bins = document.getElementsByClassName('delete-cmt-icon');
+    for (let i = 0; i < bins.length; i++) {
+        bins[i].addEventListener('click', () => {
+            handleDeleteComment({}, bins[i].dataset.cmtid);
+            location.reload();
+        })
+    }
+}
+
+function handleDeleteComment(deleteData, id) {
+    const URL = "http://localhost:8000/product/deletecomment/";
+    fetch(URL + id, {
+        method: 'DELETE',
+        headers: {
+            'Authorization': `Bearer ${sessionStorage.getItem("token")}`,
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(deleteData)
+    })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log('POST request successful:', data);
+        })
+        .catch(error => {
+            console.error('There was a problem with the fetch operation:', error);
+        });
 }

@@ -9,6 +9,31 @@ function convertTime(utcTimestamp) {
     console.log(dateGmtPlus7.toLocaleString())
     return dateGmtPlus7.toLocaleString();
 }
+
+function handleDeleteNews(deleteData) {
+    const URL = "http://localhost:8000/news/";
+    fetch(URL + newsId, {
+        method: 'DELETE',
+        headers: {
+            'Authorization': `Bearer ${sessionStorage.getItem("token")}`,
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(deleteData)
+    })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log('POST request successful:', data);
+        })
+        .catch(error => {
+            console.error('There was a problem with the fetch operation:', error);
+        });
+}
+
 function getNewsDetail() {
     const getNewsURL = "http://localhost:8000/news/";
     fetch(getNewsURL + newsId)
@@ -55,12 +80,16 @@ function addNewsComment(postData) {
 }
 
 function displayNewsDetail(data, comments) {
+    localStorage.setItem("title", data.title);
+    localStorage.setItem("content", data.content);
+    localStorage.setItem("img", data.image_url);
+    localStorage.setItem("id", data.news_id);
     const newsDetailContainer = document.getElementById("News-Detail__container");
     newsDetailContainer.innerHTML = `
-        <img src="${data.image_url}" alt="" class="w-full">
+        <img src=${data.image_url} alt="" class="w-full">
         <div>
             <strong class="md:text-[25px] text-[20px]">${data.title}</strong><br><br>
-            <p class="text-[12px]">${data.created_at}</p><br>
+            <p class="text-[12px]">${convertTime(data.created_at)}</p><br>
             <p class="text-justify">
                 ${data.content}
             </p>
@@ -75,7 +104,6 @@ function displayNewsDetail(data, comments) {
             </div>
         </div>
     `;
-    console.log(comments)
     let html = "";
     comments.forEach((value, index) => {
         html += `
@@ -84,9 +112,12 @@ function displayNewsDetail(data, comments) {
                 <p class="comment-own text-base font-semibold mt-[5px] mr-[10px]">${value.user_name}</p>
                 <p class="comment-date text-base font-semibold mt-[5px]">- ${convertTime(value.created_at)}</p>
             </div>
-            <p class="text-sm text-justify mt-[5px]">
-                ${value.content}
-            </p>
+            <div class="flex items-center justify-between">
+                <p class="text-sm text-justify mt-[5px]">
+                    ${value.content}
+                </p>
+                <i data-cmtid=${value.comment_id} class="fa-solid fa-trash block cursor-pointer delete-cmt-icon"></i>
+        </div>
         </div>
         `
     })
@@ -104,7 +135,42 @@ function displayNewsDetail(data, comments) {
         addNewsComment(params);
         location.reload();
     })
+    document.getElementById("delete-btn").addEventListener('click', () => {
+        handleDeleteNews({
+            news_id: Number(newsId)
+        })
+        window.location.href = "./NewsAdmin.html";
+    })
+    const bins = document.getElementsByClassName('delete-cmt-icon');
+    for (let i = 0; i < bins.length; i++) {
+        bins[i].addEventListener('click', () => {
+            handleDeleteComment({}, bins[i].dataset.cmtid);
+            location.reload();
+        })
+    }
 }
 
-
+function handleDeleteComment(deleteData, id) {
+    const URL = "http://localhost:8000/news/deletecomment/";
+    fetch(URL + id, {
+        method: 'DELETE',
+        headers: {
+            'Authorization': `Bearer ${sessionStorage.getItem("token")}`,
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(deleteData)
+    })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log('POST request successful:', data);
+        })
+        .catch(error => {
+            console.error('There was a problem with the fetch operation:', error);
+        });
+}
 getNewsDetail();
